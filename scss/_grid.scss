@@ -1,0 +1,221 @@
+@charset "UTF-8"; // Fixes an issue where Ruby locale is not set properly
+// See https://github.com/sass-mq/sass-mq/pull/10
+
+$mobile: 320px;
+$tablet: 540px;
+$tabletLarge: 720px;
+$desktop: 960px;
+$desktopLarge: 1024px;
+
+$breakpoint-xs: "(min-width: #{$mobile})";
+$breakpoint-sm: "(min-width: #{$tablet})";
+$breakpoint-md: "(min-width: #{$tabletLarge})";
+$breakpoint-lg: "(min-width: #{$desktop})";
+$breakpoint-xl: "(min-width: #{$desktopLarge})";
+
+$breakpoint-max-xs: "(max-width: #{$mobile})";
+$breakpoint-max-sm: "(max-width: #{$tablet})";
+$breakpoint-max-md: "(max-width: #{$tabletLarge})";
+$breakpoint-max-lg: "(max-width: #{$desktop})";
+$breakpoint-max-xl: "(max-width: #{$desktopLarge})";
+
+@media #{$breakpoint-xs} {
+  .xs-col {
+    float: left;
+    box-sizing: border-box;
+  }
+
+  .xs-col-right {
+    float: right;
+    box-sizing: border-box;
+  }
+
+  .xs-col-1 {
+    width: 1 / 12 * 100%;
+  }
+
+  .xs-col-2 {
+    width: 2 / 12 * 100%;
+  }
+
+  .xs-col-3 {
+    width: 3 / 12 * 100%;
+  }
+
+  .xs-col-4 {
+    width: 4 / 12 * 100%;
+  }
+
+  .xs-col-5 {
+    width: 5 / 12 * 100%;
+  }
+
+  .xs-col-6 {
+    width: 6 / 12 * 100%;
+  }
+
+  .xs-col-7 {
+    width: 7 / 12 * 100%;
+  }
+
+  .xs-col-8 {
+    width: 8 / 12 * 100%;
+  }
+
+  .xs-col-9 {
+    width: 9 / 12 * 100%;
+  }
+
+  .xs-col-10 {
+    width: 10 / 12 * 100%;
+  }
+
+  .xs-col-11 {
+    width: 11 / 12 * 100%;
+  }
+
+  .xs-col-12 {
+    width: 100%;
+  }
+}
+
+/// Base font size on the `<body>` element
+/// @type Number (unit)
+$mq-base-font-size: 16px !default;
+
+/// Responsive mode
+$mq-responsive: true !default;
+
+/// Breakpoint list
+$mq-breakpoints: (mobile: $mobile, tablet: $tablet, tabletLarge: $tabletLarge, desktop: $desktop, desktopLarge: $desktopLarge) !default;
+
+/// Static breakpoint (for fixed-width layouts)
+$mq-static-breakpoint: desktop !default;
+
+/// Show breakpoints in the top right corner
+$mq-show-breakpoints: () !default;
+
+/// Customize the media type (e.g. `@media screen` or `@media print`)
+$mq-media-type: all !default;
+
+/// Convert pixels to ems
+@function mq-px2em($px, $base-font-size: $mq-base-font-size) {
+  @if unitless($px) {
+    @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
+
+    @return mq-px2em($px * 1px, $base-font-size);
+  }
+  @else if unit($px) == em {
+    @return $px;
+  }
+
+  @return $px / $base-font-size * 1em;
+}
+
+/// Get a breakpoint's width
+@function mq-get-breakpoint-width($name, $breakpoints: $mq-breakpoints) {
+  @if map-has-key($breakpoints, $name) {
+    @return map-get($breakpoints, $name);
+  }
+  @else {
+    @warn "Breakpoint #{$name} wasn't found in $breakpoints.";
+  }
+}
+
+/// Media Query mixin
+@mixin mq($from: false, $until: false, $and: false, $media-type: $mq-media-type, $breakpoints: $mq-breakpoints, $responsive: $mq-responsive, $static-breakpoint: $mq-static-breakpoint) {
+  $min-width: 0;
+  $max-width: 0;
+  $media-query: "";
+
+  // From: this breakpoint (inclusive)
+  @if $from {
+    @if type-of($from) == number {
+      $min-width: mq-px2em($from);
+    }
+    @else {
+      $min-width: mq-px2em(mq-get-breakpoint-width($from, $breakpoints));
+    }
+  }
+
+  // Until: that breakpoint (exclusive)
+  @if $until {
+    @if type-of($until) == number {
+      $max-width: mq-px2em($until);
+    }
+    @else {
+      $max-width: mq-px2em(mq-get-breakpoint-width($until, $breakpoints)) - 0.01em;
+    }
+  }
+
+  // Responsive support is disabled, rasterize the output outside @media blocks
+  // The browser will rely on the cascade itself.
+  @if $responsive == false {
+    $static-breakpoint-width: mq-get-breakpoint-width($static-breakpoint, $breakpoints);
+    $target-width: mq-px2em($static-breakpoint-width);
+
+    // Output only rules that start at or span our target width
+    @if $and == false and $min-width <= $target-width and ($until == false or $max-width >= $target-width) {
+      @content;
+    }
+  }
+  @else {
+    @if $min-width != 0 {
+      $media-query: "#{$media-query} and (min-width: #{$min-width})";
+    }
+
+    @if $max-width != 0 {
+      $media-query: "#{$media-query} and (max-width: #{$max-width})";
+    }
+
+    @if $and {
+      $media-query: "#{$media-query} and #{$and}";
+    }
+
+    // Remove unnecessary media query prefix 'all and '
+    @if $media-type == "all" and $media-query != "" {
+      $media-type: "";
+      $media-query: str-slice(unquote($media-query), 6);
+    }
+
+    @media #{$media-type + $media-query} {
+      @content;
+    }
+  }
+}
+
+/// Add a breakpoint
+@mixin mq-add-breakpoint($name, $width) {
+  $new-breakpoint: ($name: $width);
+  $mq-breakpoints: map-merge($mq-breakpoints, $new-breakpoint) !global;
+}
+
+/// Show the active breakpoint in the top right corner of the viewport
+@mixin mq-show-breakpoints($show-breakpoints: $mq-show-breakpoints, $breakpoints: $mq-breakpoints) {
+  body:before {
+    background-color: #fcf8e3;
+    border-bottom: 1px solid #fbeed5;
+    border-left: 1px solid #fbeed5;
+    color: #c09853;
+    font: small-caption;
+    padding: 3px 6px;
+    pointer-events: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+
+    // Loop through the breakpoints that should be shown
+    @each $show-breakpoint in $show-breakpoints {
+      $width: mq-get-breakpoint-width($show-breakpoint, $breakpoints);
+
+      @include mq($show-breakpoint, $breakpoints: $breakpoints) {
+        content: "#{$show-breakpoint} ≥ #{$width} (#{mq-px2em($width)})";
+      }
+    }
+  }
+}
+
+@if length($mq-show-breakpoints) > 0 {
+  @include mq-show-breakpoints;
+}

@@ -1,0 +1,16 @@
+footer {
+  height: 165px;
+  background: #fff;
+
+  ul {
+    li {
+      a {
+        color: #000;
+
+        &:active {
+          color: #000;
+        }
+      }
+    }
+  }
+}
