@@ -1,0 +1,29 @@
+// Text Styles
+.text-white {
+  color: #fff;
+}
+
+// Background Styles
+.bg-green {
+  background: #44B649;
+}
+
+.bg-orange {
+  background: #FF8A48;
+}
+
+// Button Styles
+.btn {
+  border: 1px solid #fff;
+  text-decoration: none;
+  color: #fff;
+  padding: 20px 100px;
+
+  &:active {
+    color: #fff;
+  }
+
+  &-green {
+    background: #44B649;
+  }
+}

@@ -1,3 +1,9 @@
-body {
-  background: red;
-}
+// Base Imports
+@import "node_modules/basscss/css/basscss";
+@import "grid";
+@import "reset";
+@import "normalize";
+
+@import "base";
+@import "common";
+@import "footer";
