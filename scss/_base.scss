@@ -11,13 +11,7 @@ body {
 
   .col.col-12.sm-col-7 {
     @include mq($from: tabletLarge) {
-      padding-right: 25px;
-    }
-  }
-
-  .col.col-12.sm-col-5 {
-    @include mq($from: tabletLarge) {
-      padding-top: 80px;
+      padding-left: 30px;
     }
   }
 }
@@ -37,5 +31,16 @@ body {
   @include mq($from: tabletLarge) {
     margin-top: 0;
     margin-right: 2.5px;
+  }
+}
+
+#quote,
+#more-info,
+#booking,
+#pricing,
+#intro {
+  @include mq($from: tablet) {
+    padding-top: 150px;
+    padding-bottom: 150px;
   }
 }
