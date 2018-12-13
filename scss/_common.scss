@@ -22,8 +22,17 @@
   &:active {
     color: #fff;
   }
+}
 
-  &-green {
-    background: #44B649;
+// Layout
+.flexbox {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+
+  @include mq($from: tabletLarge) {
+    flex-direction: row;
   }
 }
