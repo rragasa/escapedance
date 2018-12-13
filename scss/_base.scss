@@ -1,3 +1,21 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
+
+#booking {
+  margin-top: 5px;
+
+  @include mq($from: tabletLarge) {
+    margin-top: 0;
+    margin-left: 2.5px;
+  }
+}
+
+#pricing {
+  margin-top: 5px;
+
+  @include mq($from: tabletLarge) {
+    margin-top: 0;
+    margin-right: 2.5px;
+  }
+}
