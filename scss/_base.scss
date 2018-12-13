@@ -3,6 +3,25 @@ body {
   line-height: 2rem;
 }
 
+#intro {
+  @include mq($from: tablet) {
+    padding: 4rem;
+  }
+
+
+  .col.col-12.sm-col-7 {
+    @include mq($from: tabletLarge) {
+      padding-right: 25px;
+    }
+  }
+
+  .col.col-12.sm-col-5 {
+    @include mq($from: tabletLarge) {
+      padding-top: 80px;
+    }
+  }
+}
+
 #booking {
   margin-top: 5px;
 

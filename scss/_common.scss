@@ -12,6 +12,10 @@
   color: #44B649;
 }
 
+.text-orange {
+  color: #FF8A48;
+}
+
 // Background Styles
 .bg-green {
   background: #44B649;
@@ -26,10 +30,14 @@
   border: 1px solid #fff;
   text-decoration: none;
   color: #fff;
-  padding: 20px 100px;
+  padding: 10px;
 
   &:active {
     color: #fff;
+  }
+
+  @include mq($from: tablet) {
+    max-width: 280px;
   }
 }
 
