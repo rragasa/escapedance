@@ -1,3 +1,8 @@
+html, body {
+  margin: 0;
+  height: 120%;
+}
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 2rem;
@@ -34,13 +39,122 @@ body {
   }
 }
 
+#mailing {
+  @include mq($until: tablet) {
+    margin-top: 2rem;
+  }
+}
+
 #quote,
 #more-info,
 #booking,
 #pricing,
-#intro {
+#intro,
+#mailing {
   @include mq($from: tablet) {
     padding-top: 150px;
     padding-bottom: 150px;
+  }
+}
+
+.header {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  height: 50vw;
+  min-height: 400px;
+  max-height: 550px;
+  min-width: 300px;
+  color: #eee;
+
+  img {
+    max-width: 200px;
+    height: 100%;
+
+    @include mq($from: tabletLarge) {
+      max-width: 300px;
+    }
+  }
+
+  .clearfix.absolute {
+    left: 0;
+    top: 0;
+  }
+}
+
+.header:after {
+  content: "";
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+
+  //background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(27, 32, 48, 1) 100%);
+}
+
+.header:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  transform: translateZ(0);
+  background: #1B2030 url(http://www.escapedance.co.uk/background.jpg) top center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: grow 60s  linear 10ms infinite;
+  transition: all 0.2s ease-in-out;
+  z-index: -2;
+}
+
+.menu {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  text-decoration: none;
+}
+
+.menu:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+  margin: 0 auto;
+  top: 5px;
+  left: 0;
+  right: 0;
+  box-shadow: 0 8px, 0 16px;
+}
+
+.info {
+  width: 100%;
+  padding: 15% 10% 0 10%;
+  text-align: center;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
   }
 }

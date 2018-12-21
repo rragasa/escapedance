@@ -12,6 +12,10 @@
   color: #44B649;
 }
 
+.text-black {
+  color: #000;
+}
+
 .text-orange {
   color: #FF8A48;
 }
@@ -25,11 +29,23 @@
   background: #FF8A48;
 }
 
+.bg-white {
+  background: #fff;
+}
+
+//border
+
+.border-black {
+  border: 1px solid #000;
+}
+
+.border-white {
+  border: 1px solid #fff;
+}
+
 // Button Styles
 .btn {
-  border: 1px solid #fff;
   text-decoration: none;
-  color: #fff;
   padding: 10px;
 
   &:active {
