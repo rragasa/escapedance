@@ -14,30 +14,54 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
         crossorigin="anonymous">
     <link rel="stylesheet" href="style.min.css">
+
 </head>
 
 <body class="p1">
 
+    <!-- Header -->
+    <div class="header">
+        <div class="clearfix absolute">
+            <a href="http://www.escapedance.co.uk" class="logo"><img src="http://www.escapedance.co.uk/Escape-OrangeGreenRed.png" class="col col-12 pt1 pl1"></a>
+        </div>
+
+        <div class="menu-section">
+            <div class="menu-toggle">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+            <nav>
+                <ul role="navigation" class="hidden">
+                    <li><a href="#intro">About</a></li>
+                    <li><a href="#booking">Book</a></li>
+                    <li><a href="#social">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
     <!-- Top Section -->
-    <div class="flexbox">
-        <div id="" class="p3 col col-12 sm-col-6">
+    <div class="flexbox clearfix">
+        <div id="quote" class="p4 col col-12">
             <h3 class="h3 center text-green bold">
                 Are you ready to switch from work and embark on
                 the experience of a lifetime?</h3>
         </div>
-        <div id="" class="bg-green p3 col col-12 sm-col-6">
+        <div id="more-info" class="bg-green p3 col col-12">
             <p class="text-white pt3 pb3 center">
                 Book now for ESCAPE
                 the ultimate Dance Holiday
                 Experience in Fuerteventura.</p>
-            <a href="" class=" col col-12 center mb1 btn btn-orange">More Info</a>
+            <a href="mailto:paige@impactdance.co.uk" class="flex justify-center mx-auto mb1 btn btn-orange border-white text-white">More
+                Info</a>
         </div>
 
     </div>
     <!-- Introduction -->
-    <div id="intro" class="flexbox p3">
-        <div class="col col-12">
-            <h3 class="h3 brand-type">ESCAPE</h3>
+    <div id="intro" class="clearfix p3">
+        <div class="col col-12 sm-col-5">
+            <h3 class="h3 brand-type text-orange bold">ESCAPE</h3>
             <h2 class="h2 mb2 bold">A DANCE FOCUSED HOLIDAY</h1>
 
                 <p class="bold pb2">
@@ -45,12 +69,12 @@
                     finger tips. Exercise, partying, fun and relaxation all on one resort.
                 </p>
         </div>
-        <div class="col col-12">
+        <div class="col col-12 sm-col-7">
             <p class="pb2">
                 ESCAPE is the only holiday of its kind to focus on dance styles from the
                 African Diaspora, including African, Hip Hop and Dancehall. Led by elite
-                professional dance tutors for a limited no. of guests. It is designed to be a
-                unique, Iinvigorating, holistic mind, body and soul experience.
+                professional dance tutors for a limited number of guests. It is designed to be a
+                unique, invigorating, holistic mind, body and soul experience.
             </p>
             <p>
                 Here to do good and to ensure that you feel great during your time
@@ -62,26 +86,40 @@
 
     </div>
     <!-- CTA -->
-    <div class="flexbox">
-        <div id="pricing" class="bg-orange p3 col col-12 sm-col-6">
+    <div class="flexbox clearfix">
+        <div id="pricing" class="bg-orange p3 col col-12">
             <p class="text-white pt3 pb3 center">For more information on accommodation and pricing </p>
-            <a href="" class=" col col-12 center mb1 btn btn-orange">More Info</a>
+            <a href="http://www.escapedance.co.uk/Escape_Dance_Pricing_2019.pdf" class="flex justify-center mx-auto mb1 btn btn-orange border-white text-white">More
+                Info</a>
         </div>
-        <div id="booking" class="bg-green p3 col col-12 sm-col-6">
+        <div id="booking" class="bg-green p3 col col-12">
             <p class="text-white pt3 pb3 center">To make a booking you can click the links below.</p>
-            <a href="mailto:paige@impactdance.co.uk" class="col col-12 center mb1 btn bg-green">Email</a>
-            <a href="tel:+4402081683235" class="col col-12 center mt1 btn btn-green">Call</a>
+            <a href="mailto:paige@impactdance.co.uk" class="flex justify-center mx-auto mb1 btn border-white text-white bg-green">Email</a>
+            <a href="tel:+4402081683235" class="flex justify-center mx-auto mt1 btn btn-green border-white text-white">Call</a>
         </div>
     </div>
-    <!-- Footer -->
-    <footer class="col col-12">
-        <ul class="center p4">
-            <li class="inline-block p1"><a href=""><i class="fab fa-instagram"></i></a></li>
-            <li class="inline-block p1"><a href=""><i class="fab fa-twitter"></i></a></li>
-            <li class="inline-block p1"><a href=""><i class="fab fa-facebook-f"></i></a></li>
-        </ul>
 
+    <!-- Website -->
+    <div id="mailing" class="p3">
+        <p class="center pb2">Full website coming soon. Sign up to our mailing list to keep up to date
+            with the latest news.
+        </p>
+        <div class="clearfix">
+            <a href="http://eepurl.com/ga3U1f" class="flex justify-center mx-auto mb1 btn bg-white border-black text-black">Mailing
+                List</a>
+        </div>
+
+    </div>
+    <!-- Footer -->
+    <footer id="social" class="clearfix">
+        <ul class="col col-12 center p4">
+            <li class="inline-block p2"><a href="https://www.instagram.com/escapedanceholiday/"><i class="fab fa-instagram"></i></a></li>
+            <li class="inline-block p2"><a href="https://www.facebook.com/escapedanceholiday/"><i class="fab fa-facebook-f"></i></a></li>
+        </ul>
     </footer>
+    <!-- Load Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="scripts.min.js"></script>
 </body>
 
 </html>

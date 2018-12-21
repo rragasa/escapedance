@@ -18,7 +18,9 @@
   "homepage": "https://github.com/rragasa/escapedance#readme",
   "devDependencies": {
     "autoprefixer": "^9.4.2",
+    "basscss": "^8.0.2",
     "browser-sync": "^2.26.3",
+    "compass-mixins": "^0.12.10",
     "cssnano": "^4.1.7",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
@@ -33,7 +35,6 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.1",
-    "basscss": "^8.0.2"
+    "gulp-uglify": "^3.0.1"
   }
 }
