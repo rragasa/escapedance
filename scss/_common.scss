@@ -12,6 +12,14 @@
   color: #44B649;
 }
 
+.text-black {
+  color: #000;
+}
+
+.text-orange {
+  color: #FF8A48;
+}
+
 // Background Styles
 .bg-green {
   background: #44B649;
@@ -21,15 +29,31 @@
   background: #FF8A48;
 }
 
+.bg-white {
+  background: #fff;
+}
+
+//border
+
+.border-black {
+  border: 1px solid #000;
+}
+
+.border-white {
+  border: 1px solid #fff;
+}
+
 // Button Styles
 .btn {
-  border: 1px solid #fff;
   text-decoration: none;
-  color: #fff;
-  padding: 20px 100px;
+  padding: 10px;
 
   &:active {
     color: #fff;
+  }
+
+  @include mq($from: tablet) {
+    max-width: 280px;
   }
 }
 
@@ -41,7 +65,7 @@
   overflow: hidden;
   flex-direction: column;
 
-  @include mq($from: tabletLarge) {
+  @include mq($from: desktop) {
     flex-direction: row;
   }
 }
