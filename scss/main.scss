@@ -1,7 +1,8 @@
 // Base Imports
-@import "node_modules/bootstrap/scss/bootstrap";
 @import "reset";
 @import "normalize";
 
 @import "base";
 @import "common";
+
+@import "components/navbar";
