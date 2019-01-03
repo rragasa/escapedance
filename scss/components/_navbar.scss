@@ -1,0 +1,127 @@
+// Header
+#header {
+  height: 350px;
+}
+
+// Header Nav
+.header-nav {
+  position: fixed;
+  z-index: 3;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
+  width: 100vw;
+  min-height: 100px;
+  background: $escape-green;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: $escape-green;
+  }
+
+  li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: $escape-orange;
+
+    &:hover,
+    .header .menu-btn:hover {
+      background-color: #f4f4f4;
+    }
+  }
+
+  .logo {
+    display: block;
+    float: left;
+    text-decoration: none;
+    width: 155px;
+
+    @include mq($from: $tablet, $until: $tabletLarge) {
+      width: 175px;
+    }
+
+
+    @include mq($from: tabletLarge, $until: desktop) {
+      width: 185px;
+    }
+
+
+    @include mq($from: desktop) {
+      width: 200px;
+    }
+  }
+
+  .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease;
+  }
+
+  .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 30px 20px;
+    position: relative;
+    user-select: none;
+
+    .navicon {
+      background: #f7914e;
+      display: block;
+      height: 4px;
+      position: relative;
+      transition: background .2s ease-out;
+      width: 35px;
+
+      &:before,
+      &:after {
+        background: #f7914e;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+      }
+
+      &:before {
+        top: 10px;
+      }
+
+      &:after {
+        top: -10px;
+      }
+    }
+  }
+
+  .menu-btn {
+    display: none;
+
+    &:checked ~ .menu {
+      max-height: 540px;
+      display: block;
+    }
+
+    &:checked ~ .menu-icon .navicon {
+      background: transparent;
+
+      &:before {
+        transform: rotate(-45deg);
+      }
+
+      &:after {
+        transform: rotate(45deg);
+      }
+    }
+
+    &:checked ~ .menu-icon:not(.steps) .navicon {
+      &:before,
+      &:after {
+        top: 0;
+      }
+    }
+  }
+}
