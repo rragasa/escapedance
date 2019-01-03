@@ -1,3 +1,9 @@
+// Header
+#header {
+  height: 350px;
+}
+
+// Header Nav
 .header-nav {
   position: fixed;
   z-index: 3;
@@ -30,9 +36,22 @@
   .logo {
     display: block;
     float: left;
-    font-size: 2em;
-    padding: 10px 20px;
     text-decoration: none;
+    width: 155px;
+
+    @include mq($from: $tablet, $until: $tabletLarge) {
+      width: 175px;
+    }
+
+
+    @include mq($from: tabletLarge, $until: desktop) {
+      width: 185px;
+    }
+
+
+    @include mq($from: desktop) {
+      width: 200px;
+    }
   }
 
   .menu {
@@ -45,17 +64,17 @@
     cursor: pointer;
     display: inline-block;
     float: right;
-    padding: 28px 20px;
+    padding: 30px 20px;
     position: relative;
     user-select: none;
 
     .navicon {
       background: #f7914e;
       display: block;
-      height: 2px;
+      height: 4px;
       position: relative;
       transition: background .2s ease-out;
-      width: 18px;
+      width: 35px;
 
       &:before,
       &:after {
@@ -69,11 +88,11 @@
       }
 
       &:before {
-        top: 5px;
+        top: 10px;
       }
 
       &:after {
-        top: -5px;
+        top: -10px;
       }
     }
   }
