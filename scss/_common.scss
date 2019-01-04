@@ -6,3 +6,12 @@ $escape-orange: #f7914e;
 .brand-type {
   font-family: houschka-pro, sans-serif;
 }
+
+// Layout
+.section {
+  background: $escape-green;
+  min-height: 500px;
+  padding: 20px;
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+}
