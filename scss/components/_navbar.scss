@@ -50,27 +50,6 @@ $header-checked-menu-icon: 0px;
       }
     }
 
-    .global-logo {
-      display: block;
-      float: left;
-      text-decoration: none;
-      width: $header-nav-logo-width-default;
-
-      @include mq($from: $tablet) {
-        width: $header-nav-logo-width-tablet;
-      }
-
-
-      @include mq($from: $tabletLarge) {
-        width: $header-nav-logo-width-tabletLarge;
-      }
-
-
-      @include mq($from: $desktop) {
-        width: $header-nav-logo-width-desktop;
-      }
-    }
-
     .menu {
       clear: both;
       max-height: 0;
@@ -171,4 +150,27 @@ $header-checked-menu-icon: 0px;
 .parallax-container {
   min-height: 500px;
   background: transparent;
+}
+
+.global-logo {
+  display: block;
+  text-decoration: none;
+
+  img {
+    width: $header-nav-logo-width-default;
+
+    @include mq($from: tablet) {
+      width: $header-nav-logo-width-tablet;
+    }
+
+
+    @include mq($from: tabletLarge) {
+      width: $header-nav-logo-width-tabletLarge;
+    }
+
+
+    @include mq($from: desktop) {
+      width: $header-nav-logo-width-desktop;
+    }
+  }
 }

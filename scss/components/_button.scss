@@ -9,6 +9,11 @@ $btn-width-default: 100%;
   border-radius: $border-radius;
   width: $btn-width-default;
 
+  @include mq($from: tablet) {
+    width: 180px;
+  }
+
+
   &--green {
     border: 1px solid $escape-green;
     color: $escape-green;
