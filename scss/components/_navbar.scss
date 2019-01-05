@@ -1,7 +1,6 @@
-$global-header-height: 350px;
 $parallax-min-height: 500px;
+$header-nav-min-height: 10px;
 $header-nav-width: 100vw;
-$header-nav-min-height: 120px;
 $header-nav-ul-after-padding: 15px;
 $header-nav-list-padding: 10px;
 $header-nav-hover-background: #f4f4f4;
@@ -19,7 +18,7 @@ $header-checked-menu-icon: 0px;
 
 // Global Header
 .global-header {
-  height: $global-header-height;
+  min-height: $header-nav-min-height;
 
   // Header Navigavtion
   .header-nav {
@@ -28,8 +27,8 @@ $header-checked-menu-icon: 0px;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
     width: $header-nav-width;
-    min-height: $header-nav-min-height;
     background: $escape-green;
+    top: 0;
 
     ul {
       margin: 0;
@@ -168,12 +167,8 @@ $header-checked-menu-icon: 0px;
   }
 }
 
-// Parallax scroll
-.parallax {
-  background: url("https://bit.ly/1RkaEZx") no-repeat;
-  min-height: $parallax-min-height;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+// Parallax Scroll
+.parallax-container {
+  min-height: 500px;
+  background: transparent;
 }

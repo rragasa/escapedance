@@ -8,10 +8,15 @@ $escape-orange: #f7914e;
 }
 
 // Layout
-.section {
+.bg-green {
   background: $escape-green;
-  min-height: 500px;
-  padding: 20px;
-  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
-  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.content {
+  padding: 2.5rem;
+  color: #fff;
 }

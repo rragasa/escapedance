@@ -36,5 +36,8 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.1"
+  },
+  "dependencies": {
+    "jquery-parallax.js": "^1.5.0"
   }
 }
