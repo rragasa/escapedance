@@ -1,0 +1,27 @@
+$btn-margin: 20px;
+$btn-padding: 15px;
+$border-radius: 3px;
+$btn-width-default: 100%;
+
+.btn {
+  margin-top: $btn-margin;
+  padding: $btn-padding;
+  border-radius: $border-radius;
+  width: $btn-width-default;
+
+  @include mq($from: tablet) {
+    width: 180px;
+  }
+
+
+  &--green {
+    border: 1px solid $escape-green;
+    color: $escape-green;
+  }
+
+  &--orange {
+    border: 1px solid $escape-orange;
+    color: $escape-orange;
+    background: transparent;
+  }
+}

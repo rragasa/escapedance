@@ -6,3 +6,17 @@ $escape-orange: #f7914e;
 .brand-type {
   font-family: houschka-pro, sans-serif;
 }
+
+// Layout
+.bg-green {
+  background: $escape-green;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.content {
+  padding: 2.5rem;
+  color: #fff;
+}

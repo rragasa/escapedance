@@ -1,0 +1,34 @@
+$footer-min-height: 200px;
+$footer-list-padding: 5px;
+
+.footer {
+  background: $escape-green;
+  min-height: $footer-min-height;
+
+  ul {
+    @include mq($from: tabletLarge) {
+      -moz-column-count: 2;
+      -moz-column-gap: 10px;
+      -webkit-column-count: 2;
+      -webkit-column-gap: 10px;
+      column-count: 2;
+      column-gap: 10px;
+    }
+  }
+
+  &-menu {
+    text-align: center;
+
+    @include mq($from: tabletLarge) {
+      text-align: initial;
+    }
+
+
+    li a {
+      display: block;
+      padding: $footer-list-padding;
+      text-decoration: none;
+      color: $escape-orange;
+    }
+  }
+}
