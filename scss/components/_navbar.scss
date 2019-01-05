@@ -4,11 +4,11 @@ $header-nav-width: 100vw;
 $header-nav-ul-after-padding: 15px;
 $header-nav-list-padding: 10px;
 $header-nav-hover-background: #f4f4f4;
-$header-nav-logo-width-default: 155px;
-$header-nav-logo-width-tablet: 175px;
-$header-nav-logo-width-tabletLarge: 185px;
-$header-nav-logo-width-desktop: 200px;
-$header-nav-menu-icon-padding: 30px 15px;
+$header-nav-logo-width-default: 220px;
+$header-nav-logo-width-tablet: 260px;
+$header-nav-logo-width-tabletLarge: 300px;
+$header-nav-logo-width-desktop: 340px;
+$header-nav-menu-icon-padding: 45px 15px;
 $header-navicon-height: 3px;
 $header-navicon-width: 30px;
 $header-navicon-before-top: 8px;
@@ -18,24 +18,33 @@ $header-checked-menu-icon: 0px;
 
 // Global Header
 .global-header {
-  min-height: $header-nav-min-height;
+  min-height: 10px;
+  background: $escape-green;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 180px;
+    width: 100%;
+    background-image: linear-gradient($escape-green, $escape-green);
+    transform: skewY(-4deg);
+    transform-origin: top left;
+  }
 
   // Header Navigavtion
   .header-nav {
     position: fixed;
     z-index: 3;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
     width: $header-nav-width;
-    background: $escape-green;
-    top: 0;
 
     ul {
       margin: 0;
       padding: 0;
       list-style: none;
       overflow: hidden;
-      background-color: $escape-green;
     }
 
     li a {
@@ -138,10 +147,6 @@ $header-checked-menu-icon: 0px;
           top: $header-checked-menu-icon;
         }
       }
-    }
-
-    .clearfix:after {
-      padding: $header-nav-ul-after-padding;
     }
   }
 }
