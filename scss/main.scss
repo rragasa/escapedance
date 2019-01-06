@@ -1,3 +1,12 @@
+/*
+Theme Name: Escape Dance
+Author: Rachelle Ragasa
+Description: Escape Dance Wordpress Theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
 // Base Imports
 @import "reset";
 @import "normalize";
@@ -6,6 +15,7 @@
 @import "base";
 @import "node_modules/compass-mixins/lib/compass/css3";
 
+// Component Imports
 @import "components/navbar";
 @import "components/button";
 @import "components/footer";

@@ -2,15 +2,15 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
-const sourcemaps = require('gulp-sourcemaps');
+// const postcss = require('gulp-postcss');
+// const autoprefixer = require('autoprefixer');
+// const cssnano = require('cssnano');
+// const sourcemaps = require('gulp-sourcemaps');
 const eslint = require('gulp-eslint');
 const plumber = require('gulp-plumber');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
-const csso = require('gulp-csso');
+// const csso = require('gulp-csso');
 
 const paths = {
   styles: {
@@ -27,14 +27,14 @@ function style() {
   return (
     gulp
       .src(paths.styles.src)
-      .pipe(sourcemaps.init())
+      // .pipe(sourcemaps.init())
       .pipe(sass())
       .pipe(concat('style.css'))
       .on('error', sass.logError)
-      .pipe(rename('style.min.css'))
-      .pipe(csso())
-      .pipe(postcss([autoprefixer(), cssnano()]))
-      .pipe(sourcemaps.write())
+      // .pipe(rename('style.min.css'))
+      // .pipe(csso())
+      // .pipe(postcss([autoprefixer(), cssnano()]))
+      // .pipe(sourcemaps.write())
       .pipe(gulp.dest(paths.dest))
       .pipe(browserSync.stream())
   );
