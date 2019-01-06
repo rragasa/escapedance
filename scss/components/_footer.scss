@@ -21,6 +21,8 @@ $footer-list-padding: 5px;
 
     @include mq($from: tabletLarge) {
       text-align: initial;
+      padding-left: 30px;
+      padding-top: 20px;
     }
 
 
