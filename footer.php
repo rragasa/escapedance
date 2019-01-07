@@ -23,13 +23,5 @@
                 </div>
             </div>
         </footer>
-
-        <!-- Optional JS-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
-
-
-        <!-- Custom JS -->
-        <script src="<?php echo get_template_directory_uri() . '/scripts.min.js'; ?>"></script>
     </body>
 </html>

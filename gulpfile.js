@@ -16,7 +16,10 @@ const paths = {
   styles: {
     src: 'assets/scss/**/*.scss',
   },
-  dest: './',
+  dest: {
+    root: './',
+    js: './assets/js/'
+  },
   js: 'assets/js/**/*.js',
   home: 'index.html',
 };
@@ -35,7 +38,7 @@ function style() {
       // .pipe(csso())
       // .pipe(postcss([autoprefixer(), cssnano()]))
       // .pipe(sourcemaps.write())
-      .pipe(gulp.dest(paths.dest))
+      .pipe(gulp.dest(paths.dest.root))
       .pipe(browserSync.stream())
   );
 }
@@ -53,10 +56,10 @@ function scripts() {
   return gulp
     .src(paths.js)
     .pipe(concat('scripts.js'))
-    .pipe(gulp.dest(paths.dest))
+    .pipe(gulp.dest(paths.dest.js))
     .pipe(rename('scripts.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest(paths.dest));
+    .pipe(gulp.dest(paths.dest.js));
 }
 
 gulp.task('js', gulp.series(scriptsLint, scripts));
