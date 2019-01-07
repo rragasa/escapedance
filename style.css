@@ -393,6 +393,9 @@ template {
 .green {
   color: #44b649; }
 
+.white {
+  color: #fff; }
+
 .brand-type {
   font-family: houschka-pro, sans-serif; }
 
@@ -536,8 +539,8 @@ html {
       display: block;
       padding: 10px;
       text-decoration: none;
-      color: #f7914e;
-      transform: skewY(4deg); }
+      transform: skewY(4deg);
+      color: #fff; }
     .global-header .header-nav .menu {
       clear: both;
       max-height: 0;

@@ -27,8 +27,8 @@
         <nav class="header-nav">
             <div class="clearfix">
                 <div class="global-logo left">
-                    <a href="#">
-                        <img src="https://www.testsite.escapedance.hakeemonibudo.com/wp/wp-content/themes/escapedance/images/Escape-Orange.png" alt="Escape Dance Holiday Logo" aria-labelledby="Escape Dance Holiday Logo" />
+                    <a href="<?php echo get_site_url() . '/home'?>">
+                        <img src="<?php echo get_template_directory_uri() . '/images/Escape-Orange.png'; ?>" alt="Escape Dance Holiday Logo" aria-labelledby="Escape Dance Holiday Logo" />
                     </a>
                 </div>
                 <input class="menu-btn" type="checkbox" id="menu-btn" />
