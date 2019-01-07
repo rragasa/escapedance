@@ -4,12 +4,12 @@
     data-parallax="scroll"
     data-bleed="10"
     data-speed="0.2"
-    data-image-src="<?php echo get_template_directory_uri() . '/images/Escape_Dance_Hol_31.jpg'; ?>"></div>
+    data-image-src="<?php echo get_template_directory_uri() . '/assets/images/Escape_Dance_Hol_31.jpg'; ?>"></div>
 <!-- Section 1-->
 <section class="content bg-green">
     <div class="clearfix">
         <div class="escape-icon col sm-col-3 md-col-3">
-            <img src="<?php echo get_template_directory_uri() . '/images/ESCAPE-Social-Media-Icon.png'; ?>" alt="Escape Social Media Icon">
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/ESCAPE-Social-Media-Icon.png'; ?>" alt="Escape Social Media Icon">
         </div>
         <div class="col col-12 sm-col-9 md-col-9">
             <h2 class="heading pb1">A DANCE FOCUSED HOLIDAY</h2>
@@ -71,7 +71,7 @@
      data-parallax="scroll"
      data-bleed="10"
      data-speed="0.2"
-     data-image-src="<?php echo get_template_directory_uri() . '/images/Escape_Dance_Hol_408.jpg'; ?>">
+     data-image-src="<?php echo get_template_directory_uri() . '/assets/images/Escape_Dance_Hol_408.jpg'; ?>">
     <div class="content">
         <div class="clearfix">
             <blockquote class="h3 green col col-12 sm-col-6 md-col-5">Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -104,12 +104,12 @@
 <section id="follow" class="content bg-white">
     <h3 class="h3 center green pb3">Follow</h3>
     <ul class="flex-container row">
-        <li class="flex-item"><img src="<?php echo get_template_directory_uri() . '/images/Escape_Dance_Hol_572.jpg'; ?>"></li>
-        <li class="flex-item"><img src="<?php echo get_template_directory_uri() . '/images/Escape_Dance_Hol_574.jpg'; ?>"></li>
-        <li class="flex-item"><img src="<?php echo get_template_directory_uri() . '/images/Escape_Dance_Hol_564.jpg'; ?>"></li>
-        <li class="flex-item"><img src="<?php echo get_template_directory_uri() . '/images/Escape_Dance_Hol_408.jpg'; ?>"></li>
-        <li class="flex-item"><img src="<?php echo get_template_directory_uri() . '/images/Escape_Dance_Hol_517.jpg'; ?>"></li>
-        <li class="flex-item"><img src="<?php echo get_template_directory_uri() . '/images/Escape_Dance_Hol_466.jpg'; ?>"></li>
+        <li class="flex-item"><img src="<?php echo get_template_directory_uri() . '/assets/images/Escape_Dance_Hol_572.jpg'; ?>"></li>
+        <li class="flex-item"><img src="<?php echo get_template_directory_uri() . '/assets/images/Escape_Dance_Hol_574.jpg'; ?>"></li>
+        <li class="flex-item"><img src="<?php echo get_template_directory_uri() . '/assets/images/Escape_Dance_Hol_564.jpg'; ?>"></li>
+        <li class="flex-item"><img src="<?php echo get_template_directory_uri() . '/assets/images/Escape_Dance_Hol_408.jpg'; ?>"></li>
+        <li class="flex-item"><img src="<?php echo get_template_directory_uri() . '/assets/images/Escape_Dance_Hol_517.jpg'; ?>"></li>
+        <li class="flex-item"><img src="<?php echo get_template_directory_uri() . '/assets/images/Escape_Dance_Hol_466.jpg'; ?>"></li>
 
     </ul>
     <ul class="social-icons icon-circle center p3">

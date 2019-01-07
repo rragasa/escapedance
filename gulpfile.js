@@ -14,10 +14,10 @@ const uglify = require('gulp-uglify');
 
 const paths = {
   styles: {
-    src: 'scss/**/*.scss',
+    src: 'assets/scss/**/*.scss',
   },
   dest: './',
-  js: 'js/**/*.js',
+  js: 'assets/js/**/*.js',
   home: 'index.html',
 };
 

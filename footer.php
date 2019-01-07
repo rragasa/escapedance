@@ -3,7 +3,7 @@
             <div class="clearfix">
                 <div class="global-logo center col col-12 sm-col-4">
                     <a href="<?php echo get_site_url() . '/home'?>">
-                        <img src="<?php echo get_template_directory_uri() . '/images/Escape-Orange.png'; ?>" alt="Escape Dance Holiday Logo" aria-labelledby="Escape Dance Holiday Logo" />
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/Escape-Orange.png'; ?>" alt="Escape Dance Holiday Logo" aria-labelledby="Escape Dance Holiday Logo" />
                     </a>
                 </div>
 
