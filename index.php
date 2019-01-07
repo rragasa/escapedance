@@ -1,10 +1,5 @@
 <?php get_header(); ?>
 
-<div class="parallax-container"
-    data-parallax="scroll"
-    data-bleed="10"
-    data-speed="0.2"
-    data-image-src="<?php echo get_template_directory_uri() . '/assets/images/Escape_Dance_Hol_31.jpg'; ?>"></div>
 <!-- Section 1-->
 <section class="content bg-green">
     <div class="clearfix">

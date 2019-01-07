@@ -21,7 +21,6 @@ function escapedance_setup() {
     // Register navigation menu
     register_nav_menu('primary', __('Primary menu'));
 }
-
 add_action( 'after_setup_theme', 'escapedance_setup' );
 
 /**
@@ -60,4 +59,3 @@ add_action( 'wp_enqueue_scripts', 'escapedance_scripts' );
  * Implement the Custom Header feature.
  */
 require get_parent_theme_file_path( '/inc/custom-header.php' );
-?>
