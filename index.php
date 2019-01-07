@@ -67,7 +67,7 @@
     </div>
 </section>
 
-<div class="parallax-container"
+<div id="testimonials" class="parallax-container"
      data-parallax="scroll"
      data-bleed="10"
      data-speed="0.2"

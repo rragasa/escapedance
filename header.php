@@ -33,15 +33,7 @@
                 </div>
                 <input class="menu-btn" type="checkbox" id="menu-btn" />
                 <label aria-label="Menu" class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-                <ul class="menu">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                    <li><a href="#">Watch</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">The Team</a></li>
-                    <li><a href="#">Booking</a></li>
-                    <li><a href="#">FAQ</a></li>
-                </ul>
+                <?php wp_nav_menu( array('menu' => 'primary','container'=> '','items_wrap'=>'<ul class="menu">%3$s</ul>')); ?>
             </div>
         </nav>
     </header>

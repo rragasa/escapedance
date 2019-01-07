@@ -31,6 +31,7 @@ $header-checked-menu-icon: 0px;
     background-image: linear-gradient($escape-green, $escape-green);
     transform: skewY(-4deg);
     transform-origin: top left;
+    z-index: 3;
   }
 
   // Header Navigavtion
