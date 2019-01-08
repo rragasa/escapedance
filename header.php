@@ -40,3 +40,6 @@
             </nav><!-- .header-nav -->
         </header><!-- #masthead -->
         <?php get_template_part( 'template-parts/header/header', 'image' ); ?>
+
+        <div class="site-content-contain">
+            <div id="#content" class="site-content">

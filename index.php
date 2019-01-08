@@ -17,7 +17,7 @@
 
 <!-- Section 2-->
 <section class="content bg-white">
-<p> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+        <p> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
         literature
         from
         45
@@ -113,4 +113,4 @@
     </ul>
 </section>
 
-<?php wp_footer(); ?>
+<?php get_footer(); ?>

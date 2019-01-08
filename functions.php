@@ -29,16 +29,16 @@ add_action( 'after_setup_theme', 'escapedance_setup' );
 function escapedance_scripts() {
 
     // Typekit stylesheet.
-    wp_enqueue_style( 'escapedance-typekit', 'https://use.typekit.net/uac6wuv.css', 'all' );
+    wp_enqueue_style( 'escapedance-typekit', 'https://use.typekit.net/uac6wuv.css');
 
     // Source Pro Font
-    wp_enqueue_style( 'escapedance-sourcepro', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i', 'all' );
+    wp_enqueue_style( 'escapedance-sourcepro', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i');
 
     // Font Awesome
-    wp_enqueue_style( 'escapedance-fontawesome', 'https://use.fontawesome.com/releases/v5.6.0/css/all.css', 'all' );
+    wp_enqueue_style( 'escapedance-fontawesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
     // BASSCSS
-    wp_enqueue_style( 'escapedance-basscss', 'https://unpkg.com/basscss@8.0.2/css/basscss.min.css', 'all' );
+    wp_enqueue_style( 'escapedance-basscss', 'https://unpkg.com/basscss@8.0.2/css/basscss.min.css');
 
     // Theme stylesheet.
     wp_enqueue_style( 'escapedance-style', get_stylesheet_uri() );

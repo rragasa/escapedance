@@ -12,7 +12,6 @@
  /**
  * Set up the WordPress core custom header feature.
  *
- * @uses escapedance_header_style()
  */
 function escapedance_custom_header_setup() {
 
@@ -37,9 +36,7 @@ function escapedance_custom_header_setup() {
 		'default-image'      => get_parent_theme_file_uri( '/assets/images/Escape_Dance_Hol_31.jpg' ),
 		'width'              => 2000,
 		'height'             => 1200,
-		'flex-height'        => true,
-		'video'              => true,
-		'wp-head-callback'   => 'escapedance_header_style',
+		'flex-height'        => true
 	) ) );
 
 	register_default_headers( array(
