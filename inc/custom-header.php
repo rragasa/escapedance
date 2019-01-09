@@ -48,4 +48,3 @@ function escapedance_custom_header_setup() {
 	) );
 }
 add_action( 'after_setup_theme', 'escapedance_custom_header_setup' );
-?>
