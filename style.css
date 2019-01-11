@@ -632,25 +632,23 @@ html {
     color: #f7914e;
     background: transparent; }
 
-.footer {
+.site-footer {
   background: #44b649;
   min-height: 200px; }
-  @media (min-width: 45em) {
-    .footer ul {
-      -moz-column-count: 2;
-      -moz-column-gap: 10px;
-      -webkit-column-count: 2;
-      -webkit-column-gap: 10px;
-      column-count: 2;
-      column-gap: 10px; } }
-  .footer-menu {
+  .site-footer .menu {
     text-align: center; }
     @media (min-width: 45em) {
-      .footer-menu {
+      .site-footer .menu {
+        -moz-column-count: 2;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 10px;
+        column-count: 2;
+        column-gap: 10px;
         text-align: initial;
         padding-left: 30px;
         padding-top: 20px; } }
-    .footer-menu li a {
+    .site-footer .menu li a {
       display: block;
       padding: 5px;
       text-decoration: none;

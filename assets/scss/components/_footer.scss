@@ -5,7 +5,9 @@ $footer-list-padding: 5px;
   background: $escape-green;
   min-height: $footer-min-height;
 
-  ul {
+  .menu {
+    text-align: center;
+
     @include mq($from: tabletLarge) {
       -moz-column-count: 2;
       -moz-column-gap: 10px;
@@ -13,13 +15,6 @@ $footer-list-padding: 5px;
       -webkit-column-gap: 10px;
       column-count: 2;
       column-gap: 10px;
-    }
-  }
-
-  &-menu {
-    text-align: center;
-
-    @include mq($from: tabletLarge) {
       text-align: initial;
       padding-left: 30px;
       padding-top: 20px;

@@ -18,17 +18,17 @@ if ( is_active_sidebar('sidebar-1') ||is_active_sidebar( 'sidebar-2' ) ||
 	<aside class="widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'escapedance' ); ?>">
         <?php
         if ( is_active_sidebar( 'sidebar-1' ) ) { ?>
-            <div class="widget-column footer-widget-1">
+            <div class="global-logo center col col-12 sm-col-4">
                 <?php dynamic_sidebar( 'sidebar-1' ); ?>
             </div>
         <?php }
 		if ( is_active_sidebar( 'sidebar-2' ) ) { ?>
-			<div class="widget-column footer-widget-1">
+			<div class="col col-12 sm-col-5 md-col-4">
 				<?php dynamic_sidebar( 'sidebar-2' ); ?>
 			</div>
 		<?php }
 		if ( is_active_sidebar( 'sidebar-3' ) ) { ?>
-			<div class="widget-column footer-widget-2">
+			<div class="center col col-12 sm-col-3">
 				<?php dynamic_sidebar( 'sidebar-3' ); ?>
 			</div>
 		<?php } ?>
