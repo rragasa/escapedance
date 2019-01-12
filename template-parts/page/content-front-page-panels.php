@@ -8,11 +8,11 @@
  * @version 1.0
  */
 
-global $escapedance;
+global $escapedancecounter;
 
 ?>
 
-<article id="panel<?php echo $escapedance; ?>" <?php post_class( 'escapedance-panel ' ); ?> >
+<article id="panel<?php echo $escapedancecounter; ?>" <?php post_class( 'escapedance-panel ' ); ?> >
 
 	<?php if ( has_post_thumbnail() ) :
 		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'escapedance-featured-image' );
@@ -45,6 +45,7 @@ global $escapedance;
 					) );
 				?>
 			</div><!-- .entry-content -->
+
 		</div><!-- .wrap -->
 	</div><!-- .panel-content -->
 

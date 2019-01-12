@@ -15,9 +15,38 @@
 get_header(); ?>
 
 <div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
+	<main id="main" class="site-main" role="main">
 
-    </main><!-- #main -->
+		<?php // Show the selected frontpage content.
+		if ( have_posts() ) :
+			while ( have_posts() ) : the_post();
+				get_template_part( 'template-parts/page/content', 'front-page' );
+			endwhile;
+		endif; ?>
+
+		<?php
+		// Get each of our panels and show the post data.
+		if ( 0 !== escapedance_panel_count() || is_customize_preview() ) : // If we have pages to show.
+
+			/**
+			 * Filter number of front page sections in Escape Dance.
+			 *
+			 * @since Escape Dance 1.0
+			 *
+			 * @param int $num_sections Number of front page sections.
+			 */
+			$num_sections = apply_filters( 'escapedance_front_page_sections', 4 );
+			global $escapedancecounter;
+
+			// Create a setting and control for each of the sections available in the theme.
+			for ( $i = 1; $i < ( 1 + $num_sections ); $i++ ) {
+				$escapedancecounter = $i;
+				escapedance_front_page_section( null, $i );
+			}
+
+	endif; // The if ( 0 !== escapedance_panel_count() ) ends here. ?>
+
+	</main><!-- #main -->
 </div><!-- #primary -->
 
-<?php get_footer(); ?>
+<?php get_footer();
