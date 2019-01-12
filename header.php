@@ -26,15 +26,13 @@
     <div id="page">
         <header id="masthead" class="global-header">
             <div class="global-header__bg"></div>
-            <nav class="header-nav">
-                <div class="clearfix">
-                    <?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
-                    <input class="menu-btn" type="checkbox" id="menu-btn" />
-                    <label aria-label="Menu" class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-                    <?php wp_nav_menu( array('menu' => 'primary','container'=> '','items_wrap'=>'<ul class="menu">%3$s</ul>')); ?>
-                </div>
-            </nav><!-- .header-nav -->
+
+            <?php if ( has_nav_menu( 'top' ) ) : ?>
+            <?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+            <?php endif; ?>
+
         </header><!-- #masthead -->
+
         <?php get_template_part( 'template-parts/header/header', 'image' ); ?>
 
         <div class="site-content-contain">

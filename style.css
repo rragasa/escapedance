@@ -527,22 +527,22 @@ html {
     transform: skewY(-4deg);
     transform-origin: top left;
     z-index: 3; }
-  .global-header .header-nav {
+  .global-header .main-navigation {
     position: fixed;
     z-index: 3;
     width: 100vw; }
-    .global-header .header-nav ul {
+    .global-header .main-navigation ul {
       margin: 0;
       padding: 0;
       list-style: none;
       overflow: hidden; }
-    .global-header .header-nav li a {
+    .global-header .main-navigation li a {
       display: block;
       padding: 10px;
       text-decoration: none;
       transform: skewY(4deg);
       color: #fff; }
-    .global-header .header-nav .menu {
+    .global-header .main-navigation .menu {
       clear: both;
       max-height: 0;
       transition: max-height .2s ease;
@@ -552,18 +552,18 @@ html {
       transform: skewY(-4deg);
       transform-origin: top left; }
       @media (min-width: 33.75em) {
-        .global-header .header-nav .menu {
+        .global-header .main-navigation .menu {
           padding-left: 35px;
           padding-right: 35px; } }
       @media (min-width: 45em) {
-        .global-header .header-nav .menu {
+        .global-header .main-navigation .menu {
           padding-left: 40px;
           padding-right: 40px; } }
       @media (min-width: 60em) {
-        .global-header .header-nav .menu {
+        .global-header .main-navigation .menu {
           padding-left: 45px;
           padding-right: 45px; } }
-    .global-header .header-nav .menu-icon {
+    .global-header .main-navigation .menu-icon {
       cursor: pointer;
       display: inline-block;
       float: right;
@@ -571,16 +571,16 @@ html {
       position: relative;
       user-select: none; }
       @media (min-width: 60em) {
-        .global-header .header-nav .menu-icon {
+        .global-header .main-navigation .menu-icon {
           padding: 45px 15px; } }
-      .global-header .header-nav .menu-icon .navicon {
+      .global-header .main-navigation .menu-icon .navicon {
         background: #f7914e;
         display: block;
         height: 3px;
         position: relative;
         transition: background .2s ease-out;
         width: 30px; }
-        .global-header .header-nav .menu-icon .navicon:before, .global-header .header-nav .menu-icon .navicon:after {
+        .global-header .main-navigation .menu-icon .navicon:before, .global-header .main-navigation .menu-icon .navicon:after {
           background: #f7914e;
           content: '';
           display: block;
@@ -588,22 +588,22 @@ html {
           position: absolute;
           transition: all .2s ease-out;
           width: 100%; }
-        .global-header .header-nav .menu-icon .navicon:before {
+        .global-header .main-navigation .menu-icon .navicon:before {
           top: 8px; }
-        .global-header .header-nav .menu-icon .navicon:after {
+        .global-header .main-navigation .menu-icon .navicon:after {
           top: -8px; }
-    .global-header .header-nav .menu-btn {
+    .global-header .main-navigation .menu-btn {
       display: none; }
-      .global-header .header-nav .menu-btn:checked ~ .menu {
+      .global-header .main-navigation .menu-btn:checked ~ .menu {
         max-height: 540px;
         display: block; }
-      .global-header .header-nav .menu-btn:checked ~ .menu-icon .navicon {
+      .global-header .main-navigation .menu-btn:checked ~ .menu-icon .navicon {
         background: transparent; }
-        .global-header .header-nav .menu-btn:checked ~ .menu-icon .navicon:before {
+        .global-header .main-navigation .menu-btn:checked ~ .menu-icon .navicon:before {
           transform: rotate(-45deg); }
-        .global-header .header-nav .menu-btn:checked ~ .menu-icon .navicon:after {
+        .global-header .main-navigation .menu-btn:checked ~ .menu-icon .navicon:after {
           transform: rotate(45deg); }
-      .global-header .header-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before, .global-header .header-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+      .global-header .main-navigation .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before, .global-header .main-navigation .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
         top: 0px; }
 
 .parallax-container {
