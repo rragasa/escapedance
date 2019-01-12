@@ -611,7 +611,8 @@ html {
   background: transparent; }
 
 .global-logo img {
-  width: 260px; }
+  width: 260px;
+  height: 100%; }
   @media (min-width: 60em) {
     .global-logo img {
       width: 340px; } }

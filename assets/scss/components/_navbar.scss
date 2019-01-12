@@ -164,6 +164,7 @@ $header-checked-menu-icon: 0px;
 .global-logo {
   img {
     width: $header-nav-logo-width-default;
+    height: 100%;
 
     @include mq($from: desktop) {
       width: $header-nav-logo-width-desktop;

@@ -28,11 +28,7 @@
             <div class="global-header__bg"></div>
             <nav class="header-nav">
                 <div class="clearfix">
-                    <div class="global-logo left">
-                        <a href="<?php echo get_site_url() . '/home'?>">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/images/Escape-Orange.png';?>" alt="Escape Dance Holiday Logo" aria-labelledby="Escape Dance Holiday Logo" />
-                        </a>
-                    </div>
+                    <?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
                     <input class="menu-btn" type="checkbox" id="menu-btn" />
                     <label aria-label="Menu" class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
                     <?php wp_nav_menu( array('menu' => 'primary','container'=> '','items_wrap'=>'<ul class="menu">%3$s</ul>')); ?>
