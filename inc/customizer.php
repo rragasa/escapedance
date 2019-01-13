@@ -46,7 +46,6 @@ function escapedanceholiday_customize_register( $wp_customize ) {
 		'label'    => __( 'Color Scheme', 'escapedanceholiday' ),
 		'choices'  => array(
 			'light'  => __( 'Light', 'escapedanceholiday' ),
-			'dark'   => __( 'Dark', 'escapedanceholiday' ),
 			'custom' => __( 'Custom', 'escapedanceholiday' ),
 		),
 		'section'  => 'colors',
@@ -145,7 +144,7 @@ function escapedanceholiday_sanitize_page_layout( $input ) {
  * @param string $input Color scheme.
  */
 function escapedanceholiday_sanitize_colorscheme( $input ) {
-	$valid = array( 'light', 'dark', 'custom' );
+	$valid = array( 'light', 'custom' );
 
 	if ( in_array( $input, $valid, true ) ) {
 		return $input;

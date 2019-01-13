@@ -427,11 +427,6 @@ function escapedanceholiday_scripts() {
 	// Theme block stylesheet.
 	wp_enqueue_style( 'escapedanceholiday-block-style', get_theme_file_uri( '/assets/css/blocks.css' ), array( 'escapedanceholiday-style' ), '1.0' );
 
-	// Load the dark colorscheme.
-	if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {
-		wp_enqueue_style( 'escapedanceholiday-colors-dark', get_theme_file_uri( '/assets/css/colors-dark.css' ), array( 'escapedanceholiday-style' ), '1.0' );
-	}
-
 	// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
 	if ( is_customize_preview() ) {
 		wp_enqueue_style( 'escapedanceholiday-ie9', get_theme_file_uri( '/assets/css/ie9.css' ), array( 'escapedanceholiday-style' ), '1.0' );
