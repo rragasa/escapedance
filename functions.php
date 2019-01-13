@@ -398,23 +398,6 @@ function escapedanceholiday_pingback_header() {
 add_action( 'wp_head', 'escapedanceholiday_pingback_header' );
 
 /**
- * Display custom color CSS.
- */
-function escapedanceholiday_colors_css_wrap() {
-	if ( 'custom' !== get_theme_mod( 'colorscheme' ) && ! is_customize_preview() ) {
-		return;
-	}
-
-	require_once( get_parent_theme_file_path( '/inc/color-patterns.php' ) );
-	$hue = absint( get_theme_mod( 'colorscheme_hue', 250 ) );
-?>
-	<style type="text/css" id="custom-theme-colors" <?php if ( is_customize_preview() ) { echo 'data-hue="' . $hue . '"'; } ?>>
-		<?php echo escapedanceholiday_custom_colors_css(); ?>
-	</style>
-<?php }
-add_action( 'wp_head', 'escapedanceholiday_colors_css_wrap' );
-
-/**
  * Enqueue scripts and styles.
  */
 function escapedanceholiday_scripts() {

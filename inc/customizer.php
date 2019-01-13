@@ -27,38 +27,6 @@ function escapedanceholiday_customize_register( $wp_customize ) {
 	) );
 
 	/**
-	 * Custom colors.
-	 */
-	$wp_customize->add_setting( 'colorscheme', array(
-		'default'           => 'light',
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'escapedanceholiday_sanitize_colorscheme',
-	) );
-
-	$wp_customize->add_setting( 'colorscheme_hue', array(
-		'default'           => 250,
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'absint', // The hue is stored as a positive integer.
-	) );
-
-	$wp_customize->add_control( 'colorscheme', array(
-		'type'    => 'radio',
-		'label'    => __( 'Color Scheme', 'escapedanceholiday' ),
-		'choices'  => array(
-			'light'  => __( 'Light', 'escapedanceholiday' ),
-			'custom' => __( 'Custom', 'escapedanceholiday' ),
-		),
-		'section'  => 'colors',
-		'priority' => 5,
-	) );
-
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'colorscheme_hue', array(
-		'mode' => 'hue',
-		'section'  => 'colors',
-		'priority' => 6,
-	) ) );
-
-	/**
 	 * Theme options.
 	 */
 	$wp_customize->add_section( 'theme_options', array(
