@@ -1,0 +1,19 @@
+{
+  "name": "escapedanceholiday",
+  "version": "1.0.0",
+  "description": "A custom Wordpress theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rragasa/escapedance.git"
+  },
+  "author": "Rachelle Ragasa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rragasa/escapedance/issues"
+  },
+  "homepage": "https://github.com/rragasa/escapedance#readme"
+}
