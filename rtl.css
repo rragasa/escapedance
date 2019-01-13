@@ -511,11 +511,6 @@ input[type="checkbox"] {
   .site-footer .widget-column.footer-widget-3 {
     display: inline-block;
   }
-
-  .social-navigation {
-    clear: right;
-    float: right;
-  }
 }
 
 @media screen and (min-width: 67em) {

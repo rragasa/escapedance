@@ -1811,10 +1811,6 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 	top: 100px;
 }
 
-.escapedanceholiday-front-page article:not(.has-post-thumbnail):not(:first-child) {
-	border-top: 1px solid #ddd;
-}
-
 .panel-content {
 	position: relative;
 }
@@ -2301,10 +2297,6 @@ body:not(.escapedanceholiday-front-page) .entry-header {
 /*--------------------------------------------------------------
 13.6 Footer
 --------------------------------------------------------------*/
-
-.site-footer {
-	border-top: 1px solid #eee;
-}
 
 .site-footer .wrap {
 	padding-bottom: 1.5em;
@@ -3167,6 +3159,10 @@ p > object:only-child {
  .site-footer-widgets .widget-column.footer-widget-3 {
   text-align: center;
  }
+
+ .social-navigation {
+  text-align: center;
+ }
 }
 
 @media screen and (min-width: 30em) {
@@ -3979,20 +3975,32 @@ p > object:only-child {
 		font-size: 0.875rem;
 		line-height: 1.6;
 		margin-top: 3em;
-	}
+ }
+
+ .site-footer-widgets ul {
+  -moz-column-count: 2;
+  -moz-column-gap: 10px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 10px;
+  column-count: 2;
+  column-gap: 10px;
+  text-align: initial;
+  padding-left: 30px;
+  padding-top: 20px;
+ }
 
  .site-footer-widgets .widget-column.footer-widget-1,
  .site-footer-widgets .widget-column.footer-widget-2,
  .site-footer-widgets .widget-column.footer-widget-3 {
   display: inline-block;
-		width: 36%;
+		width: 33%;
 	}
 
 	.social-navigation {
 		clear: left;
 		float: left;
 		margin-bottom: 0;
-		width: 36%;
+		width: 100%;
 	}
 
 
