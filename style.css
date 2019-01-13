@@ -509,9 +509,6 @@ html, body {
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.5rem; }
 
-html {
-  background: #44b649; }
-
 /*--------------------------------------------------------------
 17.0 Customizer
 --------------------------------------------------------------*/
@@ -559,7 +556,7 @@ html {
   visibility: visible; }
 
 .global-header {
-  min-height: 10px;
+  height: 80px;
   background: #44b649; }
   .global-header__bg {
     position: fixed;
@@ -653,7 +650,7 @@ html {
         top: 0px; }
 
 .parallax-container {
-  min-height: 500px;
+  height: 500px;
   background: transparent; }
 
 .global-logo img {

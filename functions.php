@@ -151,10 +151,10 @@ function escapedance_scripts() {
 
 
     // Theme custom script.
-	wp_enqueue_script( 'escapedance-js', get_template_directory_uri() . '/assets/js/scripts.js', true );
+    wp_enqueue_script( 'escapedance-js', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), '1.0', true );
 
     // Jquery
-    wp_enqueue_script( 'escapedance-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js', array('jquery'), '1.1.0', true );
+    wp_enqueue_script( 'escapedance-jquery', 'https://code.jquery.com/jquery-1.11.2.min.js', array('jquery'), '1.0', true );
 
     // Parallax JS
     wp_enqueue_script( 'escapedance-parallax', 'https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js',  true );

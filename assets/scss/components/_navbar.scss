@@ -1,5 +1,5 @@
-$parallax-min-height: 500px;
-$main-navigation-min-height: 10px;
+$parallax-height: 500px;
+$main-navigation-height: 80px;
 $main-navigation-width: 100vw;
 $main-navigation-ul-after-padding: 15px;
 $main-navigation-list-padding: 10px;
@@ -17,7 +17,7 @@ $header-checked-menu-icon: 0px;
 
 // Global Header
 .global-header {
-  min-height: 10px;
+  height: $main-navigation-height;
   background: $escape-green;
 
   &__bg {
@@ -157,7 +157,7 @@ $header-checked-menu-icon: 0px;
 
 // Parallax Scroll
 .parallax-container {
-  min-height: 500px;
+  height: $parallax-height;
   background: transparent;
 }
 
