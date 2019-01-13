@@ -66,11 +66,9 @@ function escapedance_setup() {
 	add_theme_support( 'post-formats', array(
 		'aside',
 		'image',
-		'video',
 		'quote',
 		'link',
 		'gallery',
-		'audio',
     ) );
 
 	// Add theme support for Custom Logo.
@@ -121,6 +119,17 @@ function escapedance_widgets_init() {
 add_action( 'widgets_init', 'escapedance_widgets_init' );
 
 /**
+ * Remove customizer panels.
+ */
+function escapedance_remove_customizer_panels()
+{
+    global $wp_customize;
+    $wp_customize->remove_section( 'colors');
+    $wp_customize->remove_section( 'custom_css');
+}
+add_action( 'customize_register', 'escapedance_remove_customizer_panels' );
+
+/**
  * Enqueue scripts and styles.
  */
 function escapedance_scripts() {
@@ -153,6 +162,20 @@ function escapedance_scripts() {
 add_action( 'wp_enqueue_scripts', 'escapedance_scripts' );
 
 /**
+ * Use front-page.php when Front page displays is set to a static page.
+ *
+ * @since Escape Dance 1.0
+ *
+ * @param string $template front-page.php.
+ *
+ * @return string The template to be used: blank if is_home() is true (defaults to index.php), else $template.
+ */
+function escapedance_front_page_template( $template ) {
+	return is_home() ? '' : $template;
+}
+add_filter( 'frontpage_template',  'escapedance_front_page_template' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_parent_theme_file_path( '/inc/custom-header.php' );
@@ -171,3 +194,9 @@ require get_parent_theme_file_path( '/inc/template-functions.php' );
  * Customizer additions.
  */
 require get_parent_theme_file_path( '/inc/customizer.php' );
+
+/**
+ * SVG icons functions and filters.
+ */
+require get_parent_theme_file_path( '/inc/icon-functions.php' );
+

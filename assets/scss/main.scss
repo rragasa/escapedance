@@ -16,6 +16,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import "node_modules/compass-mixins/lib/compass/css3";
 
 // Component Imports
+@import "components/customizer";
 @import "components/navbar";
 @import "components/button";
 @import "components/footer";

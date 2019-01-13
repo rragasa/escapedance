@@ -22,7 +22,9 @@ get_header(); ?>
 			while ( have_posts() ) : the_post();
 				get_template_part( 'template-parts/page/content', 'front-page' );
 			endwhile;
-		endif; ?>
+        else :
+            get_template_part( 'template-parts/post/content', 'none' );
+        endif; ?>
 
 		<?php
 		// Get each of our panels and show the post data.
@@ -35,7 +37,7 @@ get_header(); ?>
 			 *
 			 * @param int $num_sections Number of front page sections.
 			 */
-			$num_sections = apply_filters( 'escapedance_front_page_sections', 4 );
+			$num_sections = apply_filters( 'escapedance_front_page_sections', 8 );
 			global $escapedancecounter;
 
 			// Create a setting and control for each of the sections available in the theme.

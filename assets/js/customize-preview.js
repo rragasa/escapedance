@@ -50,6 +50,7 @@
     });
   });
 
+
   // Whether a header image is available.
   function hasHeaderImage() {
     var image = wp.customize('header_image')();
