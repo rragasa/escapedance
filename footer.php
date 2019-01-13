@@ -19,7 +19,6 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="wrap">
 				<?php
-				get_template_part( 'template-parts/footer/footer', 'widgets' );
 
 				if ( has_nav_menu( 'social' ) ) : ?>
 					<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'escapedanceholiday' ); ?>">
@@ -34,7 +33,10 @@
 						?>
 					</nav><!-- .social-navigation -->
 				<?php endif;?>
-			</div><!-- .wrap -->
+            </div><!-- .wrap -->
+            <div class="site-footer-widgets">
+                <?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
+            </div><!-- -->
 		</footer><!-- #colophon -->
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->

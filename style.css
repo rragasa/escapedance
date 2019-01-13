@@ -1213,7 +1213,6 @@ a:active {
 a .nav-title,
 .pagination a,
 .comments-pagination a,
-.site-info a,
 .widget .widget-title a,
 .widget ul li a,
 .site-footer .widget-area ul li a,
@@ -1271,8 +1270,6 @@ a:focus .nav-title,
 a:hover .nav-title,
 .edit-link a:focus,
 .edit-link a:hover,
-.site-info a:focus,
-.site-info a:hover,
 .widget .widget-title a:focus,
 .widget .widget-title a:hover,
 .widget ul li a:focus,
@@ -2361,34 +2358,6 @@ body:not(.escapedanceholiday-front-page) .entry-header {
 	top: 12px;
 	width: 16px;
 	vertical-align: top;
-}
-
-/* Site info */
-
-.site-info {
-	font-size: 14px;
-	font-size: 0.875rem;
-	margin-bottom: 1em;
-}
-
-.site-info a {
-	color: #666;
-}
-
-.site-info .sep {
-	margin: 0;
-	display: block;
-	visibility: hidden;
-	height: 0;
-	width: 100%;
-}
-
-.site-info span[role=separator] {
-	padding: 0 0.2em 0 0.4em;
-}
-
-.site-info span[role=separator]::before {
-	content: '\002f';
 }
 
 /*--------------------------------------------------------------
@@ -4005,17 +3974,8 @@ p > object:only-child {
 		width: 36%;
 	}
 
-	.site-info {
-		float: left;
-		padding: 0.7em 0 0;
-		width: 58%;
-	}
 
-	.social-navigation + .site-info {
-		margin-left: 6%;
-	}
-
-	.site-info .sep {
+ .sep {
 		margin: 0 0.5em;
 		display: inline;
 		visibility: visible;
@@ -4148,8 +4108,7 @@ p > object:only-child {
 	.comment-reply-link,
 	.comment-metadata .edit-link,
 	.pingback .edit-link,
-	.site-footer aside.widget-area,
-	.site-info {
+	.site-footer aside.widget-area {
 		display: none !important;
 	}
 
