@@ -3,7 +3,7 @@
  * Displays footer widgets if assigned
  *
  * @package WordPress
- * @subpackage Escape_Dance_Holiday
+ * @subpackage Twenty_Seventeen
  * @since 1.0
  * @version 1.0
  */
