@@ -2318,6 +2318,22 @@ body:not(.escapedanceholiday-front-page) .entry-header {
 	padding-top: 2em;
 }
 
+.site-footer-widgets{
+ background:#437c34;
+ color:#f7941e;
+}
+.site-footer-widgets .widget ol li,.site-footer-widgets .widget ul li{
+ border:0;
+}
+.site-footer-widgets .widget ol li a,.site-footer-widgets .widget ul li a{
+ box-shadow:none;
+ color:#f7941e;
+}
+.site-footer-widgets .widget a,.site-footer-widgets .widget a img{
+ box-shadow:none;
+}
+
+
 /* Social nav */
 
 .social-navigation {
@@ -3142,7 +3158,15 @@ p > object:only-child {
 
 	body.customize-partial-edit-shortcuts-shown .site-header .site-title {
 		padding-left: 0;
-	}
+ }
+
+ /* Site Footer */
+
+ .site-footer-widgets .widget-column.footer-widget-1,
+ .site-footer-widgets .widget-column.footer-widget-2,
+ .site-footer-widgets .widget-column.footer-widget-3 {
+  text-align: center;
+ }
 }
 
 @media screen and (min-width: 30em) {
@@ -3249,7 +3273,7 @@ p > object:only-child {
 	.site-footer {
 		font-size: 16px;
 		font-size: 1rem;
-	}
+ }
 
 	/* Gallery Columns */
 
@@ -3957,14 +3981,11 @@ p > object:only-child {
 		margin-top: 3em;
 	}
 
-	.site-footer .widget-column.footer-widget-1 {
-		float: left;
+ .site-footer-widgets .widget-column.footer-widget-1,
+ .site-footer-widgets .widget-column.footer-widget-2,
+ .site-footer-widgets .widget-column.footer-widget-3 {
+  display: inline-block;
 		width: 36%;
-	}
-
-	.site-footer .widget-column.footer-widget-2 {
-		float: right;
-		width: 58%;
 	}
 
 	.social-navigation {

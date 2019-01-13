@@ -1,0 +1,39 @@
+$escape-green: #437C34;
+$escape-orange: #f7941e;
+
+/* Footer widgets */
+.site-footer-widgets {
+  background: $escape-green;
+
+  .widget {
+    ul {
+      li {
+        border: none;
+
+        a {
+          box-shadow: none;
+          color: $escape-orange;
+        }
+      }
+    }
+
+    ol {
+      li {
+        border: none;
+
+        a {
+          box-shadow: none;
+          color: $escape-orange;
+        }
+      }
+    }
+
+    a {
+      box-shadow: none;
+
+      img {
+        box-shadow: none;
+      }
+    }
+  }
+}

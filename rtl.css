@@ -506,12 +506,10 @@ input[type="checkbox"] {
 
   /* Footer */
 
-  .site-footer .widget-column.footer-widget-1 {
-    float: right;
-  }
-
-  .site-footer .widget-column.footer-widget-2 {
-    float: left;
+  .site-footer-widgets .widget-column.footer-widget-1,
+  .site-footer .widget-column.footer-widget-2,
+  .site-footer .widget-column.footer-widget-3 {
+    display: inline-block;
   }
 
   .social-navigation {
