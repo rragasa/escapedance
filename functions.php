@@ -226,6 +226,17 @@ function escapedanceholiday_setup() {
 add_action( 'after_setup_theme', 'escapedanceholiday_setup' );
 
 /**
+ * Remove customizer panels.
+ */
+function escapedanceholiday_remove_customizer_panels()
+{
+    global $wp_customize;
+    $wp_customize->remove_section( 'colors');
+    $wp_customize->remove_section( 'custom_css');
+}
+add_action( 'customize_register', 'escapedanceholiday_remove_customizer_panels' );
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
