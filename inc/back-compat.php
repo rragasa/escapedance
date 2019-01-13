@@ -7,7 +7,7 @@
  * relies on many newer functions and markup changes introduced in 4.7.
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage Escape_Dance_Holiday
  * @since Escape Dance Holiday 1.0
  */
 

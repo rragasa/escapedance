@@ -3,7 +3,7 @@
  * Displays content for front page
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage Escape_Dance_Holiday
  * @since 1.0
  * @version 1.0
  */

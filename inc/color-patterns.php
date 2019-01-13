@@ -3,7 +3,7 @@
  * Escape Dance Holiday: Color Patterns
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage Escape_Dance_Holiday
  * @since 1.0
  */
 

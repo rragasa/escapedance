@@ -3,7 +3,7 @@
  * Template for displaying search forms in Escape Dance Holiday
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage Escape_Dance_Holiday
  * @since 1.0
  * @version 1.0
  */
