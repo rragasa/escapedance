@@ -1315,6 +1315,93 @@ a:hover .nav-title,
 12.0 Navigation
 --------------------------------------------------------------*/
 
+.main-navigation{
+ position:fixed;
+ z-index:3;
+ width:100vw
+}
+.main-navigation ul{
+ margin:0;
+ padding:0;
+ list-style:none;
+ overflow:hidden
+}
+.main-navigation li a{
+ display:block;
+ padding:10px;
+ text-decoration:none;
+ -webkit-transform:skewY(4deg);
+ transform:skewY(4deg);
+ color:#fff
+}
+.main-navigation .menu{
+ clear:both;
+ max-height:0;
+ transition:max-height .2s ease;
+ padding-left:30px;
+ padding-right:30px;
+ background-image:linear-gradient(#437c34,#437c34);
+ -webkit-transform:skewY(-4deg);
+ transform:skewY(-4deg);
+ -webkit-transform-origin:top left;
+ transform-origin:top left
+}
+.main-navigation .menu-icon{
+ cursor:pointer;
+ display:inline-block;
+ float:right;
+ padding:55px 15px;
+ position:relative;
+ -webkit-user-select:none;
+ -moz-user-select:none;
+ -ms-user-select:none;
+ user-select:none
+}
+.main-navigation .menu-icon .navicon{
+ background:#f7941e;
+ display:block;
+ height:3px;
+ position:relative;
+ transition:background .2s ease-out;
+ width:30px
+}
+.main-navigation .menu-icon .navicon:after,.main-navigation .menu-icon .navicon:before{
+ background:#f7941e;
+ content:"";
+ display:block;
+ height:100%;
+ position:absolute;
+ transition:all .2s ease-out;
+ width:100%
+}
+.main-navigation .menu-icon .navicon:before{
+ top:8px
+}
+.main-navigation .menu-icon .navicon:after{
+ top:-8px
+}
+.main-navigation .menu-btn{
+ display:none
+}
+.main-navigation .menu-btn:checked~.menu{
+ max-height:540px;
+ display:block
+}
+.main-navigation .menu-btn:checked~.menu-icon .navicon{
+ background:0 0
+}
+.main-navigation .menu-btn:checked~.menu-icon .navicon:before{
+ -webkit-transform:rotate(-45deg);
+ transform:rotate(-45deg)
+}
+.main-navigation .menu-btn:checked~.menu-icon .navicon:after{
+ -webkit-transform:rotate(45deg);
+ transform:rotate(45deg)
+}
+.main-navigation .menu-btn:checked~.menu-icon:not(.steps) .navicon:after,.main-navigation .menu-btn:checked~.menu-icon:not(.steps) .navicon:before{
+ top:0
+}
+
 
 /*--------------------------------------------------------------
 13.0 Layout
@@ -1368,7 +1455,6 @@ body {
 }
 
 .site-header {
-	background-color: #fafafa;
 	position: relative;
 }
 
@@ -3617,7 +3703,7 @@ p > object:only-child {
 	input,
 	select,
 	textarea,
-	.navigation-top,
+	.main-navigation,
 	.social-navigation,
 	#secondary,
 	.content-bottom-widgets,
@@ -3690,11 +3776,6 @@ p > object:only-child {
 	}
 
 	/* Site Branding */
-
-	.site-header {
-		background: transparent;
-		padding: 0;
-	}
 
 	.custom-header-media {
 		padding: 0;

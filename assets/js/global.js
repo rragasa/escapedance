@@ -3,34 +3,10 @@
 
   // Variables and DOM Caching.
   var $body = $('body'),
-    $customHeader = $body.find('.custom-header'),
-    $branding = $customHeader.find('.site-branding'),
-    $navigation = $body.find('.navigation-top'),
-    $menuToggle = $navigation.find('.menu-toggle'),
     $sidebar = $body.find('#secondary'),
     $entryContent = $body.find('.entry-content'),
     $formatQuote = $body.find('.format-quote blockquote'),
-    isFrontPage = $body.hasClass('escapedanceholiday-front-page') || $body.hasClass('home blog'),
-    navigationOuterHeight,
     resizeTimer;
-
-
-  // Set margins of branding in header.
-  function adjustHeaderHeight() {
-    if ('none' === $menuToggle.css('display')) {
-
-      // The margin should be applied to different elements on front-page or home vs interior pages.
-      if (isFrontPage) {
-        $branding.css('margin-bottom', navigationOuterHeight);
-      } else {
-        $customHeader.css('margin-bottom', navigationOuterHeight);
-      }
-
-    } else {
-      $customHeader.css('margin-bottom', '0');
-      $branding.css('margin-bottom', '0');
-    }
-  }
 
   // Set icon for quotes.
   function setQuotesIcon() {
@@ -108,12 +84,6 @@
   // Fire on document ready.
   $(document).ready(function () {
 
-    // If navigation menu is present on page, setNavProps and adjustScrollClass.
-    if ($navigation.length) {
-      setNavProps();
-      adjustScrollClass();
-    }
-
     adjustHeaderHeight();
     setQuotesIcon();
     if (true === supportsInlineSVG()) {
@@ -124,22 +94,6 @@
       document.documentElement.className += ' background-fixed';
     }
   });
-
-  // If navigation menu is present on page, adjust it on scroll and screen resize.
-  if ($navigation.length) {
-
-    // On scroll, we want to stick/unstick the navigation.
-    $(window).on('scroll', function () {
-      adjustScrollClass();
-      adjustHeaderHeight();
-    });
-
-    // Also want to make sure the navigation is where it should be on resize.
-    $(window).resize(function () {
-      setNavProps();
-      setTimeout(adjustScrollClass, 500);
-    });
-  }
 
   $(window).resize(function () {
     clearTimeout(resizeTimer);
