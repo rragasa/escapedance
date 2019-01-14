@@ -432,16 +432,6 @@ function escapedanceholiday_scripts() {
 	// Theme block stylesheet.
 	wp_enqueue_style( 'escapedanceholiday-block-style', get_theme_file_uri( '/assets/css/blocks.css' ), array( 'escapedanceholiday-style' ), '1.0' );
 
-	// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
-	if ( is_customize_preview() ) {
-		wp_enqueue_style( 'escapedanceholiday-ie9', get_theme_file_uri( '/assets/css/ie9.css' ), array( 'escapedanceholiday-style' ), '1.0' );
-		wp_style_add_data( 'escapedanceholiday-ie9', 'conditional', 'IE 9' );
-	}
-
-	// Load the Internet Explorer 8 specific stylesheet.
-	wp_enqueue_style( 'escapedanceholiday-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), array( 'escapedanceholiday-style' ), '1.0' );
-	wp_style_add_data( 'escapedanceholiday-ie8', 'conditional', 'lt IE 9' );
-
 	// Load the html5 shiv.
 	wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), '3.7.3' );
 	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );

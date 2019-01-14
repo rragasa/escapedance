@@ -56,6 +56,24 @@ $header-checked-menu-icon: 0px;
 }
 
 /* Navigation Top */
+.site-header {
+  height: $main-navigation-height;
+  background: $escape-green;
+
+  &-bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 180px;
+    width: 100%;
+    background-image: linear-gradient($escape-green, $escape-green);
+    transform: skewY(-4deg);
+    transform-origin: top left;
+    z-index: 3;
+  }
+}
 
 /* Main Navigation */
 .main-navigation {

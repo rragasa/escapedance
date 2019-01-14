@@ -1315,6 +1315,25 @@ a:hover .nav-title,
 12.0 Navigation
 --------------------------------------------------------------*/
 
+.site-header{
+ height:80px
+}
+.site-header-bg{
+ position:fixed;
+ top:0;
+ bottom:0;
+ right:0;
+ left:0;
+ height:180px;
+ width:100%;
+ background-image:linear-gradient(#437c34,#437c34);
+ -webkit-transform:skewY(-4deg);
+ transform:skewY(-4deg);
+ -webkit-transform-origin:top left;
+ transform-origin:top left;
+ z-index:3
+}
+
 .main-navigation{
  position:fixed;
  z-index:3;
@@ -1522,65 +1541,6 @@ body.home.title-tagline-hidden.has-header-video .custom-logo-link img {
 	opacity: 0.9;
 }
 
-.custom-header {
-	position: relative;
-}
-
-.has-header-image.escapedanceholiday-front-page .custom-header,
-.has-header-video.escapedanceholiday-front-page .custom-header,
-.has-header-image.home.blog .custom-header,
-.has-header-video.home.blog .custom-header {
-	display: table;
-	height: 300px;
-	height: 75vh;
-	width: 100%;
-}
-
-.custom-header-media {
-	bottom: 0;
-	left: 0;
-	overflow: hidden;
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 100%;
-}
-
-.custom-header-media:before {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.3+75 */
-	background: -moz-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 75%, rgba(0, 0, 0, 0.3) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 75%, rgba(0, 0, 0, 0.3) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 75%, rgba(0, 0, 0, 0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#4d000000", GradientType=0); /* IE6-9 */
-	bottom: 0;
-	content: "";
-	display: block;
-	height: 100%;
-	left: 0;
-	position: absolute;
-	right: 0;
-	z-index: 2;
-}
-
-.has-header-image .custom-header-media img,
-.has-header-video .custom-header-media video,
-.has-header-video .custom-header-media iframe {
-	position: fixed;
-	height: auto;
-	left: 50%;
-	max-width: 1000%;
-	min-height: 100%;
-	min-width: 100%;
-	min-width: 100vw; /* vw prevents 1px gap on left that 100% has */
-	width: auto;
-	top: 50%;
-	padding-bottom: 1px; /* Prevent header from extending beyond the footer */
-	-ms-transform: translateX(-50%) translateY(-50%);
-	-moz-transform: translateX(-50%) translateY(-50%);
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
-}
-
 .wp-custom-header .wp-custom-header-video-button { /* Specificity prevents .color-dark button overrides */
 	background-color: rgba(34, 34, 34, 0.5);
 	border: 1px solid rgba(255, 255, 255, 0.6);
@@ -1605,41 +1565,6 @@ body.home.title-tagline-hidden.has-header-video .custom-logo-link img {
 
 .admin-bar .wp-custom-header-video-button {
 	top: 62px;
-}
-
-.has-header-image:not(.escapedanceholiday-front-page):not(.home) .custom-header-media img {
-	bottom: 0;
-	position: absolute;
-	top: auto;
-	-ms-transform: translateX(-50%) translateY(0);
-	-moz-transform: translateX(-50%) translateY(0);
-	-webkit-transform: translateX(-50%) translateY(0);
-	transform: translateX(-50%) translateY(0);
-}
-
-/* For browsers that support 'object-fit' */
-@supports ( object-fit: cover ) {
-	.has-header-image .custom-header-media img,
-	.has-header-video .custom-header-media video,
-	.has-header-video .custom-header-media iframe,
-	.has-header-image:not(.escapedanceholiday-front-page):not(.home) .custom-header-media img {
-		height: 100%;
-		left: 0;
-		-o-object-fit: cover;
-		object-fit: cover;
-		top: 0;
-		-ms-transform: none;
-		-moz-transform: none;
-		-webkit-transform: none;
-		transform: none;
-		width: 100%;
-	}
-}
-
-/* Hides div in Customizer preview when header images or videos change. */
-
-body:not(.has-header-image):not(.has-header-video) .custom-header-media {
-	display: none;
 }
 
 /*--------------------------------------------------------------
@@ -3200,37 +3125,6 @@ p > object:only-child {
 
 	/* Site Branding */
 
-	.has-header-image.escapedanceholiday-front-page .custom-header,
-	.has-header-video.escapedanceholiday-front-page .custom-header,
-	.has-header-image.home.blog .custom-header,
-	.has-header-video.home.blog .custom-header {
-		display: block;
-		height: auto;
-	}
-
-	.custom-header-media {
-		height: 165px;
-		position: relative;
-	}
-
-	.escapedanceholiday-front-page.has-header-image .custom-header-media,
-	.escapedanceholiday-front-page.has-header-video .custom-header-media,
-	.home.blog.has-header-image .custom-header-media,
-	.home.blog.has-header-video .custom-header-media {
-		height: 0;
-		position: relative;
-	}
-
-	.has-header-image:not(.escapedanceholiday-front-page):not(.home) .custom-header-media,
-	.has-header-video:not(.escapedanceholiday-front-page):not(.home) .custom-header-media {
-		bottom: 0;
-		height: auto;
-		left: 0;
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-
 	.custom-logo-link {
 		padding-right: 2em;
 	}
@@ -3256,37 +3150,10 @@ p > object:only-child {
 		font-size: 1rem;
 	}
 
-	/* Navigation */
-
-
 	/* Main Navigation */
 
 
-	/* Front Page */
-
-	.escapedanceholiday-front-page.has-header-image .custom-header-media,
-	.escapedanceholiday-front-page.has-header-video .custom-header-media,
-	.home.blog.has-header-image .custom-header-media,
-	.home.blog.has-header-video .custom-header-media {
-		height: 1200px;
-		height: 100vh;
-		max-height: 100%;
-		overflow: hidden;
-	}
-
-	.escapedanceholiday-front-page.has-header-image .custom-header-media:before,
-	.escapedanceholiday-front-page.has-header-video .custom-header-media:before,
-	.home.blog.has-header-image .custom-header-media:before,
-	.home.blog.has-header-video .custom-header-media:before {
-		height: 33%;
-	}
-
-	.admin-bar.escapedanceholiday-front-page.has-header-image .custom-header-media,
-	.admin-bar.escapedanceholiday-front-page.has-header-video .custom-header-media,
-	.admin-bar.home.blog.has-header-image .custom-header-media,
-	.admin-bar.home.blog.has-header-video .custom-header-media {
-		height: calc(100vh - 32px);
-	}
+ /* Front Page */
 
 	.panel-content .wrap {
 		padding-bottom: 4.5em;
@@ -3776,10 +3643,6 @@ p > object:only-child {
 	}
 
 	/* Site Branding */
-
-	.custom-header-media {
-		padding: 0;
-	}
 
 	.site-title {
 		font-size: 25pt;

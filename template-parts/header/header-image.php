@@ -9,10 +9,5 @@
  */
 
 ?>
-<div class="custom-header">
-
-		<div class="custom-header-media">
-			<?php the_custom_header_markup(); ?>
-		</div>
-
-</div><!-- .custom-header -->
+<div class="parallax-container" data-parallax="scroll" data-bleed="10" data-speed="0.2" data-image-src="<?php echo( get_header_image() ); ?>">
+</div><!-- .parallax-container -->
