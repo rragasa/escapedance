@@ -74,25 +74,6 @@ input[type="checkbox"] {
 
 /* Main Navigation */
 
-.main-navigation ul {
-  text-align: right;
-}
-
-.main-navigation ul ul {
-  padding-left: 0;
-  padding-right: 1.5em;
-}
-
-.menu-toggle .icon {
-  margin-left: 0.5em;
-  margin-right: 0;
-}
-
-.dropdown-toggle {
-  left: -0.5em;
-  right: auto;
-}
-
 /* Front Page */
 
 .wp-custom-header-video-button {
@@ -308,68 +289,7 @@ input[type="checkbox"] {
 
   /* Navigation */
 
-  .main-navigation ul ul {
-    padding-right: 0;
-  }
-
-  .main-navigation ul ul:before,
-  .main-navigation ul ul:after {
-    left: 0.5em;
-    right: auto;
-  }
-
-  .main-navigation ul ul,
-  .main-navigation ul ul ul {
-    left: auto;
-    right: -999em;
-  }
-
-  .main-navigation ul ul li:hover > ul,
-  .main-navigation ul ul li.focus > ul {
-    left: auto;
-    right: 100%;
-  }
-
-  .main-navigation ul li:hover > ul,
-  .main-navigation ul li.focus > ul {
-    left: auto;
-    right: 0.5em;
-  }
-
-  .main-navigation ul li.menu-item-has-children:before,
-  .main-navigation ul li.menu-item-has-children:after,
-  .main-navigation ul li.page_item_has_children:before,
-  .main-navigation ul li.page_item_has_children:after {
-    left: 1em;
-    right: auto;
-  }
-
-  .main-navigation .menu-item-has-children > a > .icon,
-  .main-navigation .page_item_has_children > a > .icon {
-    left: auto;
-    right: 5px;
-  }
-
-  .main-navigation ul ul .menu-item-has-children > a > .icon,
-  .main-navigation ul ul .page_item_has_children > a > .icon {
-    left: 1em;
-    right: auto;
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-  }
-
   /* Scroll down arrow */
-
-  .navigation-top .menu-scroll-down {
-    left: 0;
-    right: auto;
-  }
-
-  .site-header .menu-scroll-down {
-    left: 0;
-    right: auto;
-  }
 
   .entry-title a {
     margin-left: auto;
