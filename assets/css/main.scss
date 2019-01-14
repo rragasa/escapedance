@@ -7,7 +7,7 @@ $main-navigation-width: 100vw;
 $main-navigation-ul-after-padding: 15px;
 $main-navigation-list-padding: 10px;
 $main-navigation-hover-background: #f4f4f4;
-$main-navigation-logo-width-default: 260px;
+$main-navigation-logo-width-default: 300px;
 $main-navigation-logo-width-desktop: 340px;
 $main-navigation-menu-icon-padding: 55px 15px;
 $main-navigation-menu-icon-padding-desktop: 45px 15px;
@@ -73,6 +73,19 @@ $header-checked-menu-icon: 0px;
     transform-origin: top left;
     z-index: 3;
   }
+}
+
+.site-branding {
+  .custom-logo-link {
+    img {
+      width: $main-navigation-logo-width-default;
+    }
+  }
+}
+
+.parallax-container {
+  height: $parallax-height;
+  background: transparent;
 }
 
 /* Main Navigation */

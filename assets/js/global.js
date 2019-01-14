@@ -84,7 +84,6 @@
   // Fire on document ready.
   $(document).ready(function () {
 
-    adjustHeaderHeight();
     setQuotesIcon();
     if (true === supportsInlineSVG()) {
       document.documentElement.className = document.documentElement.className.replace(/(\s*)no-svg(\s*)/, '$1svg$2');
@@ -100,7 +99,6 @@
     resizeTimer = setTimeout(function () {
       belowEntryMetaClass('blockquote.alignleft, blockquote.alignright');
     }, 300);
-    setTimeout(adjustHeaderHeight, 1000);
   });
 
   // Add header video class after the video is loaded.
