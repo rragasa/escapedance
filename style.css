@@ -55,7 +55,8 @@ html {
 	font-family: sans-serif;
 	line-height: 1.15;
 	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
+ -webkit-text-size-adjust: 100%;
+ background: #437C34;
 }
 
 body {
@@ -1464,11 +1465,6 @@ html {
 	box-sizing: inherit;
 }
 
-body {
-	background: #fff;
-	/* Fallback for when there is no custom background color defined. */
-}
-
 #page {
 	position: relative;
 	word-wrap: break-word;
@@ -1577,6 +1573,22 @@ body.has-header-video .site-description {
 .escapedanceholiday-panel {
 	overflow: hidden;
 	position: relative;
+}
+
+.escapedanceholiday-panel:first-child,
+.escapedanceholiday-panel:nth-child(3),
+.escapedanceholiday-panel:nth-child(5)
+ {
+ background: #437C34;
+ color: #fff;
+}
+
+.escapedanceholiday-panel:nth-child(2),
+.escapedanceholiday-panel:nth-child(4),
+.escapedanceholiday-panel:nth-child(6)
+ {
+ background: #fff;
+ color: #437C34;
 }
 
 .panel-image {
