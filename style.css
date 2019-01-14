@@ -1583,12 +1583,54 @@ body.has-header-video .site-description {
  color: #fff;
 }
 
+.escapedanceholiday-panel:first-child h1,
+.escapedanceholiday-panel:first-child h2,
+.escapedanceholiday-panel:first-child h3,
+.escapedanceholiday-panel:first-child h4,
+.escapedanceholiday-panel:first-child h5,
+.escapedanceholiday-panel:first-child h6,
+.escapedanceholiday-panel:nth-child(3) h1,
+.escapedanceholiday-panel:nth-child(3) h2,
+.escapedanceholiday-panel:nth-child(3) h3,
+.escapedanceholiday-panel:nth-child(3) h4,
+.escapedanceholiday-panel:nth-child(3) h5,
+.escapedanceholiday-panel:nth-child(3) h6,
+.escapedanceholiday-panel:nth-child(5) h1,
+.escapedanceholiday-panel:nth-child(5) h2,
+.escapedanceholiday-panel:nth-child(5) h3,
+.escapedanceholiday-panel:nth-child(5) h4,
+.escapedanceholiday-panel:nth-child(5) h5,
+.escapedanceholiday-panel:nth-child(5) h6{
+ color:#fff
+}
+
 .escapedanceholiday-panel:nth-child(2),
 .escapedanceholiday-panel:nth-child(4),
 .escapedanceholiday-panel:nth-child(6)
  {
  background: #fff;
  color: #437C34;
+}
+
+.escapedanceholiday-panel:nth-child(2) h1,
+.escapedanceholiday-panel:nth-child(2) h2,
+.escapedanceholiday-panel:nth-child(2) h3,
+.escapedanceholiday-panel:nth-child(2) h4,
+.escapedanceholiday-panel:nth-child(2) h5,
+.escapedanceholiday-panel:nth-child(2) h6,
+.escapedanceholiday-panel:nth-child(4) h1,
+.escapedanceholiday-panel:nth-child(4) h2,
+.escapedanceholiday-panel:nth-child(4) h3,
+.escapedanceholiday-panel:nth-child(4) h4,
+.escapedanceholiday-panel:nth-child(4) h5,
+.escapedanceholiday-panel:nth-child(4) h6,
+.escapedanceholiday-panel:nth-child(6) h1,
+.escapedanceholiday-panel:nth-child(6) h2,
+.escapedanceholiday-panel:nth-child(6) h3,
+.escapedanceholiday-panel:nth-child(6) h4,
+.escapedanceholiday-panel:nth-child(6) h5,
+.escapedanceholiday-panel:nth-child(6) h6{
+ color:#437c34
 }
 
 .panel-image {
@@ -3043,9 +3085,9 @@ p > object:only-child {
 		padding-top: 3.5em;
 	}
 
-	.page-one-column .panel-content .wrap {
+	/* .page-one-column .panel-content .wrap {
 		max-width: 740px;
-	}
+	} */
 
 	.panel-content .entry-header {
 		margin-bottom: 4.5em;
@@ -3456,7 +3498,6 @@ p > object:only-child {
 		font-size: 14px;
 		font-size: 0.875rem;
 		line-height: 1.6;
-		margin-top: 3em;
  }
 
  .site-footer-widgets ul {
