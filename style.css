@@ -1234,7 +1234,6 @@ figcaption:hover {
  height:80px;
 }
 .site-header-bg{
- position:fixed;
  top:0;
  bottom:0;
  right:0;
@@ -1263,21 +1262,18 @@ figcaption:hover {
 }
 
 .main-navigation{
- position:fixed;
  z-index:3;
  width:100vw;
+ -webkit-transform:skewY(4deg);
+ transform:skewY(4deg);
+ padding-top: 3%;
 }
+
 .main-navigation ul{
  margin:0;
  padding:0;
  list-style:none;
- overflow:hidden;
- -moz-column-count: 1;
- -moz-column-gap: 10px;
- -webkit-column-count: 1;
- -webkit-column-gap: 10px;
- column-count: 1;
- column-gap: 10px;
+ display: none;
  text-align: initial;
  padding-left: 30px;
  padding-top: 20px;
@@ -1407,7 +1403,15 @@ html {
 }
 
 .site-header {
-	position: relative;
+ position: fixed;
+ z-index: 3;
+ transition: top 400ms ease-in-out;
+ top: -200px;
+}
+
+.site-header--visible {
+ top: 0;
+ transition: top 200ms ease-in-out;
 }
 
 /* Site branding */
@@ -3110,7 +3114,6 @@ button, input[type="button"], input[type="submit"] {
   margin:0;
   padding:0;
   list-style:none;
-  overflow:hidden;
   -moz-column-count: 3;
   -moz-column-gap: 10px;
   -webkit-column-count: 3;

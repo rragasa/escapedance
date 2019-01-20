@@ -106,4 +106,26 @@
     $body.addClass('has-header-video');
   });
 
+  /**
+	* Sticky header hide on scroll down
+  */
+  var $header = document.querySelector(".js-header");
+  var menu = document.querySelectorAll("#menu-btn");
+
+  var prevScrollY = 0;
+  var minScrollY = 200;
+
+  window.addEventListener("scroll", function (e) {
+    if (window.scrollY < prevScrollY) {
+      $header.classList.add("site-header--visible");
+    } else if (window.scrollY > prevScrollY) {
+      if (window.scrollY < minScrollY) return;
+      $header.classList.remove("site-header--visible");
+      for (let item of menu) {
+        item.checked = false;
+      }
+    }
+    prevScrollY = window.scrollY;
+  });
+
 })(jQuery);

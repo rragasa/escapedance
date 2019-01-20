@@ -26,13 +26,12 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'escapedanceholiday' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-        <div class="site-header-bg"></div>
-
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
-		<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-        <?php endif; ?>
-
+	<header id="masthead" class="site-header js-header site-header--visible" role="banner">
+        <div class="site-header-bg">
+            <?php if ( has_nav_menu( 'top' ) ) : ?>
+            <?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+            <?php endif; ?>
+        </div>
     </header><!-- #masthead -->
 
     <?php get_template_part( 'template-parts/header/header', 'image' ); ?>
