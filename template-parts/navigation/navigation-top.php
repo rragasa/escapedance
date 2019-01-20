@@ -18,6 +18,7 @@
 
 	<?php wp_nav_menu( array(
 		'theme_location' => 'top',
-		'menu_id'        => 'top-menu',
+        'menu_id'        => 'top-menu',
+        'container'       => false,
 	) ); ?>
 </nav><!-- #site-navigation -->
