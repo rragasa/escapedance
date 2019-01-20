@@ -432,7 +432,10 @@ function escapedanceholiday_scripts() {
 	// Theme block stylesheet.
 	wp_enqueue_style( 'escapedanceholiday-block-style', get_theme_file_uri( '/assets/css/blocks.css' ), array( 'escapedanceholiday-style' ), '1.0' );
 
-	// Load the html5 shiv.
+    // Font Awesome
+    wp_enqueue_style('font-awesome', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css', array( 'escapedanceholiday-style' ), '1.0' );
+
+    // Load the html5 shiv.
 	wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), '3.7.3' );
 	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
 
@@ -559,6 +562,32 @@ function escapedanceholiday_front_page_template( $template ) {
 add_filter( 'frontpage_template',  'escapedanceholiday_front_page_template' );
 
 /**
+ * Modifies the WooCommerce order receieved title.
+ *
+ * @since Escape Dance Holiday 1.0
+ *
+ */
+function woo_title_order_received( $title, $id ) {
+	if ( is_order_received_page() && get_the_ID() === $id ) {
+		$title = "Booking Received";
+	}
+	return $title;
+}
+add_filter( 'the_title', 'woo_title_order_received', 10, 2 );
+
+/**
+ * Modifies the WooCommerce order receieved subtext.
+ *
+ * @since Escape Dance Holiday 1.0
+ *
+ */
+function woocommerce_thankyou_order_received_text() {
+ $added_text = 'Thank you for booking a space for ESCAPE Dance Holiday 2019. Welcome to the family!';
+ return $added_text ;
+}
+add_filter( 'woocommerce_thankyou_order_received_text', 'woocommerce_thankyou_order_received_text' );
+
+/**
  * Modifies tag cloud widget arguments to display all tags in the same font size
  * and use list format for better accessibility.
  *
@@ -567,15 +596,6 @@ add_filter( 'frontpage_template',  'escapedanceholiday_front_page_template' );
  * @param array $args Arguments for tag cloud widget.
  * @return array The filtered arguments for tag cloud widget.
  */
-function escapedanceholiday_widget_tag_cloud_args( $args ) {
-	$args['largest']  = 1;
-	$args['smallest'] = 1;
-	$args['unit']     = 'em';
-	$args['format']   = 'list';
-
-	return $args;
-}
-add_filter( 'widget_tag_cloud_args', 'escapedanceholiday_widget_tag_cloud_args' );
 
 /**
  * Implement the Custom Header feature.
