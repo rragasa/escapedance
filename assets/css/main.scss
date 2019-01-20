@@ -68,3 +68,10 @@
 .fadeIn-bottom {
   top: 80%;
 }
+
+.escapedanceholiday-panel:nth-child(odd) {
+  button, input[type="button"], input[type="submit"] {
+    background-color: #f7941e;
+    color: white;
+  }
+}
