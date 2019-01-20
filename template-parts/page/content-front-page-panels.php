@@ -9,10 +9,11 @@
  */
 
 global $escapedanceholidaycounter;
+$slug = basename(get_permalink());
 
 ?>
 
-<article id="panel<?php echo $escapedanceholidaycounter; ?>" <?php post_class( 'escapedanceholiday-panel ' ); ?> >
+<article id="<?php echo $slug; ?>" <?php post_class( 'escapedanceholiday-panel ' ); ?> >
 
 	<?php if ( has_post_thumbnail() ) :
 		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'escapedanceholiday-featured-image' );
