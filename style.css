@@ -1297,6 +1297,7 @@ figcaption:hover {
  transform:skewY(-4deg);
  -webkit-transform-origin:top left;
  transform-origin:top left;
+ overflow: scroll;
 }
 .main-navigation .menu-icon{
  cursor:pointer;
@@ -1337,7 +1338,7 @@ figcaption:hover {
  display:none;
 }
 .main-navigation .menu-btn:checked~.menu{
- max-height:540px;
+ max-height: 580px;
  display:block;
 }
 .main-navigation .menu-btn:checked~.menu-icon .navicon{

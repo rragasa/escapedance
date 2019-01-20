@@ -113,7 +113,7 @@
   var menu = document.querySelectorAll("#menu-btn");
 
   var prevScrollY = 0;
-  var minScrollY = 200;
+  var minScrollY = 600;
 
   window.addEventListener("scroll", function (e) {
     if (window.scrollY < prevScrollY) {
